@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const Box = styled.div`
     display:flex;
-    position: relative;
     justify-content: center;
 
 `
@@ -12,6 +11,20 @@ const Image = styled.img`
     width: 100vw;
     text-align: center;
     object-fit : cover;
+    position : relative;
+    background : rgb(18,18,24);
+
+`
+const Text = styled.div`
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+`
+const Span = styled.span`
+    font-weight : 400;
+    font-size: 3.4722222222222223vw;
+
 `
 
 const First = styled(Image).attrs({ src: "https://an2-img.amz.wtchn.net/image/v2/OXVVO9CM53dOnYOjQN7XrQ.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqRXZhMjV2YWprelkzWjBNWEp5TW5VeVpHMW1aV01pZlEuaUNaV0V3U0Jod1l6RDF3aWhQWWhWZXdKbzJTMG1HVjd4NlB3VjBrMllOSQ" })`
@@ -29,6 +42,10 @@ function Main() {
         <>
             <Box>
                 <First />
+                <Text>
+                    <Span>영화, 드라마, 예능, 다큐멘터리를 무제한으로 <br /></Span>
+
+                </Text>
             </Box>
             <Box>
                 <Second />
@@ -42,6 +59,7 @@ function Main() {
             <Box>
                 <Fifth />
             </Box>
+
         </>
     );
 }
