@@ -2,7 +2,14 @@ import { createGlobalStyle } from "styled-components";
 import Router from "./Router";
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
+ }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,9 +35,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
-	font-weight: 300;
-  font-family: 'Source Sans Pro', sans-serif;
+	@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+	font-family: 'Noto Sans KR', 'Nanum Gothic', sans-serif;
+  font-weight: 300;
   background-color: ${props => props.theme.bgColor};
   color:${(props) => props.theme.textColor};
   line-height: 1.2;
@@ -40,6 +49,7 @@ a {
   color:inherit;
 }
 *{
+
   box-sizing: border-box;
 }
 ol, ul {
