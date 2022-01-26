@@ -1,6 +1,6 @@
-import { ReactComponent as DownIcon } from "./Icons/arrow-down-solid.svg";
-import { ReactComponent as UpIcon } from "./Icons/arrow-up-solid.svg";
 import styled, { keyframes } from "styled-components";
+import {Link} from "react-scroll"
+
 const Animation = keyframes`
     0%{
         opacity : 0;
@@ -44,7 +44,7 @@ const H4 = styled.h4`
     letter-spacing: -0.04861111111111111vw;
     margin-bottom:3.75vw;
 `
-const First = styled(Box)`
+const First = styled(Box).attrs({id : "1"})`
     ::before{
     content :""  ;
     background : url("https://an2-img.amz.wtchn.net/image/v2/CfFOq6D__lgxqxVn33d_4w.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqRXZkVE41YTJ4dmNEWnBOMjE0T0hGa2NIUjFabVVpZlEucGdwM3BJemhPVjRnLWowS1ZTSkd1emF4NXBRel9XTnFKZ3l3NHVTZktkaw") center center / cover no-repeat;
@@ -58,7 +58,7 @@ const First = styled(Box)`
 }
 
     `
-const Second = styled(Box)`
+const Second = styled(Box).attrs({id : "2"})`
 ::before{
     content :""  ;
     background : url("https://an2-img.amz.wtchn.net/image/v2/mstekYRJbXsB11aQAh5uqw.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqSXZjM1J2Y21VdmFXMWhaMlV2TVRZd09EVTFNVFl6TkRVeE5qVXhNak00TlNKOS5CQXk2ckl6cjAzNVVPYzVaODJpNTZ6eUdITzhFM3JHQVhseW5UVGZMekZz") center center / cover no-repeat;
@@ -71,7 +71,7 @@ const Second = styled(Box)`
     opacity: 0.6;
 }
 `
-const Third = styled(Box)`
+const Third = styled(Box).attrs({id : "3"})`
 ::before{
     content :""  ;
     background : url("https://an2-img.amz.wtchn.net/image/v2/F-Ny23NqHJiMoEG72fB1jw.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqSXZjM1J2Y21VdmFXMWhaMlV2TVRZek9UTTNOVGc1T0RneU1UTXdORGcxT0NKOS5NLW9iQ0QzTEFkMnhSYnc0V2JGSW1jaUFndl9fRFFTVUIxUUhXR3gxUWE4") center center / cover no-repeat;
@@ -84,7 +84,7 @@ const Third = styled(Box)`
     opacity: 0.6;
 }
 `
-const Fourth = styled(Box)`
+const Fourth = styled(Box).attrs({id : "4"})`
     ::before{
     content :""  ;
     background : url("https://an2-img.amz.wtchn.net/image/v2/ii6wJCYLACBS7sru0oZhkA.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqRXZhbVppYzNSd1pYZDVlSEUxYUhod01tNWtaR1lpZlEuN0dkd0pkOTJrMWZoUzFrXzVhS3JNbG05c0dPZ0hFaU5wQnloeTlrRWdtdw") center center / cover no-repeat;
@@ -97,7 +97,7 @@ const Fourth = styled(Box)`
     opacity: 0.6;
 }
 `
-const Fifth = styled(Box)`
+const Fifth = styled(Box).attrs({id : "5"})`
     ::before{
     content :""  ;
     background : url("https://an2-img.amz.wtchn.net/image/v2/-XAxJnuESCZrE1BfehvMFQ.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqSXZjM1J2Y21VdmFXMWhaMlV2TVRZeE9UYzNPVFkxT1RrMk1qUXlOek01TUNKOS5OaDRfTFl3ZmRycUx6X1lldDk4dlNsUHp1YTNKV2t5ZUVXYXhNS1R5bUxB") center center / cover no-repeat;
@@ -165,15 +165,15 @@ function Main() {
                     <H4>매주 5백 여편의 신작이 업데이트 되며, 추가 요금은 전혀 없어요.</H4>
                     <Button>2주 무료 이용 시작</Button>
                 </Text>
-                <Circle><DownArrow/></Circle>
+                <Circle><Link to="2" spy={true} smooth={true}><DownArrow/></Link></Circle>
             </First>
             <Second>
-                <Text>
+                <Text >
                     <Span>여럿이 함께, 하나의 이용권으로 <br /></Span>
                     <H4>동시 4개 기기에서 재생이 가능한 프리미엄 이용권을 이용해보세요.</H4>
                     <Button>2주 무료 이용 시작</Button>
                 </Text>
-                <Circle><DownArrow/></Circle>
+                <Circle><Link to="3" spy={true} smooth={true}><DownArrow/></Link></Circle>
             </Second>
             <Third>
                 <Text>
@@ -181,15 +181,15 @@ function Main() {
                     <H4>최대 Ultra HD 4K 해상도로 생생한 감동을 느껴보세요.</H4>
                     <Button>2주 무료 이용 시작</Button>
                 </Text>
-                <Circle><DownArrow/></Circle>
+                <Circle><Link to="4" spy={true} smooth={true}><DownArrow/></Link></Circle>
             </Third>
-            <Fourth>
+            <Fourth >
                 <Text>
                     <Span>이동 중에도 감상을 멈추지 마세요 <br /></Span>
                     <H4>보고 싶은 콘텐츠를 다운로드하여 오프라인으로 즐기세요.</H4>
                     <Button>2주 무료 이용 시작</Button>
                 </Text>
-                <Circle><DownArrow/></Circle>
+                <Circle><Link to="5" spy={true} smooth={true}><DownArrow/></Link></Circle>
             </Fourth>
             <Fifth>                
                 <Text>
@@ -197,7 +197,7 @@ function Main() {
                     <H4>10만여 편의 작품을 무제한 스트리밍하세요.</H4>
                     <Button>2주 무료 이용 시작</Button>
                 </Text>
-                <Circle><UpArrow/></Circle>
+                <Circle><Link to="1" spy={true} smooth={true}><UpArrow/></Link></Circle>
             </Fifth>
         </>
     );
