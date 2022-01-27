@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import {Link} from "react-scroll"
-
+import React, { useEffect, useState } from "react";
 const Animation = keyframes`
     0%{
         opacity : 0;
@@ -130,6 +130,7 @@ const Circle = styled.div`
     left : 50%;
     transform: translate(-50%, 0);
 
+
 `
 const DownArrow = styled.button`
 position: relative;
@@ -142,6 +143,7 @@ position: relative;
     z-index: 100;
     background : url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU2LjMgKDgxNzE2KSAtIGh0dHBzOi8vc2tldGNoLmNvbSAtLT4KICAgIDx0aXRsZT5BcnRib2FyZDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJBcnRib2FyZCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBvbHlnb24gaWQ9IlBhdGgiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgcG9pbnRzPSIxOS42OTM2MTY4IDExLjIxODg4IDQuOTU1ODk4OTUgMTEuMjE4ODggMTEuMTk2NzA3NCAxNy4zOTU0MTg5IDkuNDgxNDQgMTkuMDkyNDk2OCAwLjMgMTAuMDA1NjQyMSAyLjAxNTI2NzM3IDguMzA4NTY0MjEgMi4wMTU4NzM2OCA4LjMwOTE3MDUzIDkuNDgxNDQgMC45MiAxMS4xOTY3MDc0IDIuNjE3MDc3ODkgNC45NTU4OTg5NSA4Ljc5MzYxNjg0IDE5LjY5MzYxNjggOC43OTM2MTY4NCI+PC9wb2x5Z29uPgogICAgPC9nPgo8L3N2Zz4=") center no-repeat;
     background-size : 1.736111111vw 1.7361111111111111vw;
+    cursor: pointer;
 ` 
 const UpArrow = styled.button`
 position: relative;
@@ -154,51 +156,153 @@ position: relative;
     z-index: 100;
     background : url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU2LjMgKDgxNzE2KSAtIGh0dHBzOi8vc2tldGNoLmNvbSAtLT4KICAgIDx0aXRsZT5BcnRib2FyZDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJBcnRib2FyZCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBvbHlnb24gaWQ9IlBhdGgiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgcG9pbnRzPSIxOS42OTM2MTY4IDExLjIxODg4IDQuOTU1ODk4OTUgMTEuMjE4ODggMTEuMTk2NzA3NCAxNy4zOTU0MTg5IDkuNDgxNDQgMTkuMDkyNDk2OCAwLjMgMTAuMDA1NjQyMSAyLjAxNTI2NzM3IDguMzA4NTY0MjEgMi4wMTU4NzM2OCA4LjMwOTE3MDUzIDkuNDgxNDQgMC45MiAxMS4xOTY3MDc0IDIuNjE3MDc3ODkgNC45NTU4OTg5NSA4Ljc5MzYxNjg0IDE5LjY5MzYxNjggOC43OTM2MTY4NCI+PC9wb2x5Z29uPgogICAgPC9nPgo8L3N2Zz4=") center no-repeat;
     background-size : 1.736111111vw 1.7361111111111111vw;
+    cursor: pointer;
 ` 
 
+const Right = styled.div`
+    position : fixed;
+    top: 50%;
+    right: 50px;
+    z-index:499;
+    transform : translateY(-50%);
+`
+const RightCircle = styled.div`
+    background-color: ${props => props.theme.textColor};
+    width: 1.25vw;
+    height: 1.25vw;
+    border-radius: 50%;
+    margin : 0 0 1.1111111111111111111112vw;
+    cursor : pointer;
+    opacity : 0.2;
+`
+const AccentRightCircle = styled(RightCircle)`
+    opacity: 1;
+`
 function Main() {
+    const [fCircle, setFCircle] = useState<boolean>(true);
+    const [sCircle, setSCircle] = useState<boolean>(false);
+    const [tCircle, setTCircle] = useState<boolean>(false);
+    const [foCircle, setFoCircle] = useState<boolean>(false);
+    const [fiCircle, setFiCircle] = useState<boolean>(false);
+    const fPicture = React.useRef<HTMLDivElement>(null);
+    const sPicture = React.useRef<HTMLDivElement>(null);
+    const tPicture = React.useRef<HTMLDivElement>(null);
+    const foPicture = React.useRef<HTMLDivElement>(null);
+    const fiPicture = React.useRef<HTMLDivElement>(null);
+
+    const FirstClick = () => {
+        setFCircle(true);
+        setSCircle(false);
+        setTCircle(false);
+        setFoCircle(false);
+        setFiCircle(false);
+    }
+    const SecondClick = () => {
+        setFCircle(false);
+        setSCircle(true);
+        setTCircle(false);
+        setFoCircle(false);
+        setFiCircle(false);
+    }
+    const ThirdClick = () => {
+        setFCircle(false);
+        setSCircle(false);
+        setTCircle(true);
+        setFoCircle(false);
+        setFiCircle(false);
+    }
+    const FourthClick = () => {
+        setFCircle(false);
+        setSCircle(false);
+        setTCircle(false);
+        setFoCircle(true);
+        setFiCircle(false);
+    }
+    const FifthClick = () => {
+        setFCircle(false);
+        setSCircle(false);
+        setTCircle(false);
+        setFoCircle(false);
+        setFiCircle(true);
+    }
+
+    const moveScroll = (ref : React.RefObject<HTMLDivElement>) => {
+        ref.current?.scrollIntoView({ behavior:'smooth'});
+    }
+
+    const trackHeight = () => {
+        if (window.pageYOffset < window.innerHeight / 2){
+            //FirstClick();
+            moveScroll(fPicture);
+        }else if(window.pageYOffset >= window.innerHeight /2 && window.pageYOffset < window.innerHeight *3/2){
+            //SecondClick();
+            moveScroll(sPicture);
+        }else if(window.pageYOffset >= window.innerHeight*3/2 && window.pageYOffset < window.innerHeight *5/2){
+            //ThirdClick();
+            moveScroll(tPicture);
+        }else if(window.pageYOffset >= window.innerHeight*5/2 && window.pageYOffset < window.innerHeight *7/2){
+            //FourthClick();
+            moveScroll(foPicture);
+        }else if(window.pageYOffset >= window.innerHeight*7/2 && window.pageYOffset < window.innerHeight *9/2){
+            //FifthClick();
+            moveScroll(fiPicture);
+        }
+        setTimeout(trackHeight, 2000);
+    }
+    
+    useEffect(() => {
+        trackHeight();
+      }, []);
+    
     return (
         <>
-            <First>
+            <First ref={fPicture}>
                 <Text>
                     <Span>영화, 드라마, 예능, 다큐멘터리를 무제한으로 <br /></Span>
                     <H4>매주 5백 여편의 신작이 업데이트 되며, 추가 요금은 전혀 없어요.</H4>
                     <Button>2주 무료 이용 시작</Button>
                 </Text>
-                <Circle><Link to="2" spy={true} smooth={true}><DownArrow/></Link></Circle>
+                <Circle><Link to="2" spy={true} smooth={true}><DownArrow onClick={SecondClick}/></Link></Circle>
             </First>
-            <Second>
+            <Second ref={sPicture}>
                 <Text >
                     <Span>여럿이 함께, 하나의 이용권으로 <br /></Span>
                     <H4>동시 4개 기기에서 재생이 가능한 프리미엄 이용권을 이용해보세요.</H4>
                     <Button>2주 무료 이용 시작</Button>
                 </Text>
-                <Circle><Link to="3" spy={true} smooth={true}><DownArrow/></Link></Circle>
+                <Circle><Link to="3" spy={true} smooth={true}><DownArrow onClick={ThirdClick}/></Link></Circle>
             </Second>
-            <Third>
+            <Third ref={tPicture}>
                 <Text>
                     <Span>이제 TV로 최고의 화질을 경험하세요 <br /></Span>
                     <H4>최대 Ultra HD 4K 해상도로 생생한 감동을 느껴보세요.</H4>
                     <Button>2주 무료 이용 시작</Button>
                 </Text>
-                <Circle><Link to="4" spy={true} smooth={true}><DownArrow/></Link></Circle>
+                <Circle><Link to="4" spy={true} smooth={true}><DownArrow onClick={FourthClick}/></Link></Circle>
             </Third>
-            <Fourth >
+            <Fourth ref={foPicture}>
                 <Text>
                     <Span>이동 중에도 감상을 멈추지 마세요 <br /></Span>
                     <H4>보고 싶은 콘텐츠를 다운로드하여 오프라인으로 즐기세요.</H4>
                     <Button>2주 무료 이용 시작</Button>
                 </Text>
-                <Circle><Link to="5" spy={true} smooth={true}><DownArrow/></Link></Circle>
+                <Circle><Link to="5" spy={true} smooth={true}><DownArrow onClick={FifthClick}/></Link></Circle>
             </Fourth>
-            <Fifth>                
+            <Fifth ref={fiPicture}>                
                 <Text>
                     <Span>스마트폰, 태블릿, TV, PC, 크롬캐스트, Android TV에서 <br /></Span>
                     <H4>10만여 편의 작품을 무제한 스트리밍하세요.</H4>
                     <Button>2주 무료 이용 시작</Button>
                 </Text>
-                <Circle><Link to="1" spy={true} smooth={true}><UpArrow/></Link></Circle>
+                <Circle><Link to="1" spy={true} smooth={true}><UpArrow onClick={FirstClick}/></Link></Circle>
             </Fifth>
+            <Right>
+                {fCircle?<Link to="1" spy={true} smooth={true}><AccentRightCircle onClick={FirstClick}/></Link> : <Link to="1" spy={true} smooth={true}><RightCircle onClick={FirstClick}/></Link> }
+                {sCircle?<Link to="2" spy={true} smooth={true}><AccentRightCircle onClick={SecondClick}/></Link> : <Link to="2" spy={true} smooth={true} ><RightCircle onClick={SecondClick}/></Link> }
+                {tCircle?<Link to="3" spy={true} smooth={true}><AccentRightCircle onClick={ThirdClick}/></Link> : <Link to="3" spy={true} smooth={true}><RightCircle onClick={ThirdClick}/></Link> }
+                {foCircle?<Link to="4" spy={true} smooth={true}><AccentRightCircle onClick={FourthClick}/></Link> : <Link to="4" spy={true} smooth={true}><RightCircle onClick={FourthClick}/></Link> }
+                {fiCircle?<Link to="5" spy={true} smooth={true}><AccentRightCircle onClick={FifthClick}/></Link> : <Link to="5" spy={true} smooth={true}><RightCircle onClick={FifthClick}/></Link> }
+            </Right>
         </>
     );
 }
