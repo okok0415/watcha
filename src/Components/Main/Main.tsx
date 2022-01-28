@@ -1,7 +1,8 @@
 import styled, { keyframes } from "styled-components";
 import {Link} from "react-scroll"
 import React, { useEffect, useState } from "react";
-const Animation = keyframes`
+import {Link as Li} from "react-router-dom";
+export const Animation = keyframes`
     0%{
         opacity : 0;
     }
@@ -12,7 +13,7 @@ const Animation = keyframes`
         opacity: 0.6;
     }
 `
-const Box = styled.div`
+export const Box = styled.div`
     display:flex;
     justify-content: center;
     align-items: center;
@@ -232,27 +233,27 @@ function Main() {
 
     const trackHeight = () => {
         if (window.pageYOffset < window.innerHeight / 2){
-            //FirstClick();
+            FirstClick();
             moveScroll(fPicture);
         }else if(window.pageYOffset >= window.innerHeight /2 && window.pageYOffset < window.innerHeight *3/2){
-            //SecondClick();
+            SecondClick();
             moveScroll(sPicture);
         }else if(window.pageYOffset >= window.innerHeight*3/2 && window.pageYOffset < window.innerHeight *5/2){
-            //ThirdClick();
+            ThirdClick();
             moveScroll(tPicture);
         }else if(window.pageYOffset >= window.innerHeight*5/2 && window.pageYOffset < window.innerHeight *7/2){
-            //FourthClick();
+            FourthClick();
             moveScroll(foPicture);
         }else if(window.pageYOffset >= window.innerHeight*7/2 && window.pageYOffset < window.innerHeight *9/2){
-            //FifthClick();
+            FifthClick();
             moveScroll(fiPicture);
         }
-        setTimeout(trackHeight, 2000);
+
     }
     
     useEffect(() => {
-        trackHeight();
-      }, []);
+        setTimeout(trackHeight, 2000);
+      }, [window.scrollY]);
     
     return (
         <>
@@ -260,7 +261,7 @@ function Main() {
                 <Text>
                     <Span>영화, 드라마, 예능, 다큐멘터리를 무제한으로 <br /></Span>
                     <H4>매주 5백 여편의 신작이 업데이트 되며, 추가 요금은 전혀 없어요.</H4>
-                    <Button>2주 무료 이용 시작</Button>
+                    <Li to="/start"><Button>2주 무료 이용 시작</Button></Li>
                 </Text>
                 <Circle><Link to="2" spy={true} smooth={true}><DownArrow onClick={SecondClick}/></Link></Circle>
             </First>
@@ -268,7 +269,7 @@ function Main() {
                 <Text >
                     <Span>여럿이 함께, 하나의 이용권으로 <br /></Span>
                     <H4>동시 4개 기기에서 재생이 가능한 프리미엄 이용권을 이용해보세요.</H4>
-                    <Button>2주 무료 이용 시작</Button>
+                    <Li to="/start"><Button>2주 무료 이용 시작</Button></Li>
                 </Text>
                 <Circle><Link to="3" spy={true} smooth={true}><DownArrow onClick={ThirdClick}/></Link></Circle>
             </Second>
@@ -276,7 +277,7 @@ function Main() {
                 <Text>
                     <Span>이제 TV로 최고의 화질을 경험하세요 <br /></Span>
                     <H4>최대 Ultra HD 4K 해상도로 생생한 감동을 느껴보세요.</H4>
-                    <Button>2주 무료 이용 시작</Button>
+                    <Li to="/start"><Button>2주 무료 이용 시작</Button></Li>
                 </Text>
                 <Circle><Link to="4" spy={true} smooth={true}><DownArrow onClick={FourthClick}/></Link></Circle>
             </Third>
@@ -284,7 +285,7 @@ function Main() {
                 <Text>
                     <Span>이동 중에도 감상을 멈추지 마세요 <br /></Span>
                     <H4>보고 싶은 콘텐츠를 다운로드하여 오프라인으로 즐기세요.</H4>
-                    <Button>2주 무료 이용 시작</Button>
+                    <Li to="/start"><Button>2주 무료 이용 시작</Button></Li>
                 </Text>
                 <Circle><Link to="5" spy={true} smooth={true}><DownArrow onClick={FifthClick}/></Link></Circle>
             </Fourth>
@@ -292,7 +293,7 @@ function Main() {
                 <Text>
                     <Span>스마트폰, 태블릿, TV, PC, 크롬캐스트, Android TV에서 <br /></Span>
                     <H4>10만여 편의 작품을 무제한 스트리밍하세요.</H4>
-                    <Button>2주 무료 이용 시작</Button>
+                    <Li to="/start"><Button>2주 무료 이용 시작</Button></Li>
                 </Text>
                 <Circle><Link to="1" spy={true} smooth={true}><UpArrow onClick={FirstClick}/></Link></Circle>
             </Fifth>
