@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styled  from "styled-components";
+import styled from "styled-components";
 import { Login, Logo, Nav } from "../Main/Main";
 
 
@@ -81,10 +81,10 @@ export const Input = styled.input`
 
 const Email = styled(Input).attrs(
     {
-        placeholder : '이메일 (example@gmail.com)',
-        type : 'email',
-        data_valid : "false",
-        autocomplete : 'off',
+        placeholder: '이메일 (example@gmail.com)',
+        type: 'email',
+        data_valid: "false",
+        autocomplete: 'off',
     })`
 
     color: rgba(51, 51, 51);
@@ -96,10 +96,10 @@ const Email = styled(Input).attrs(
 `
 const Password = styled(Input).attrs(
     {
-        placeholder : '비밀번호',
-        type : 'password',
-        data_valid : "false",
-        autocomplete : 'off',
+        placeholder: '비밀번호',
+        type: 'password',
+        data_valid: "false",
+        autocomplete: 'off',
     })`
     border-top-right-radius: 0;
     border-top-left-radius: 0;
@@ -148,16 +148,16 @@ export const P = styled.div`
 
 
 
-` 
-function Sign_in(){
+`
+function Sign_in() {
 
-    
 
-    return(
+
+    return (
         <>
-            
+
             <Image>
-                <Nav><Link to='/'><Logo/></Link><Link to='sign_up'><Login>회원가입</Login></Link></Nav>
+                <Nav><Link to='/'><Logo /></Link><Link to='sign_up'><Login>회원가입</Login></Link></Nav>
                 <Main>
                     <Format>
                         <FormatTitle>
@@ -165,16 +165,16 @@ function Sign_in(){
                             <FormatRSpan>비밀번호를 잊어버리셨나요?</FormatRSpan>
                         </FormatTitle>
                         <Form>
-                            <FormList><Email/></FormList>
-                            <FormList><Password/></FormList>
+                            <FormList><Email /></FormList>
+                            <FormList><Password /></FormList>
 
                         </Form>
                         <LoginSession>
-                        <LoginButton>로그인</LoginButton>
+                            <LoginButton>로그인</LoginButton>
                         </LoginSession>
                     </Format>
                     <PTitle>
-                    <P>다른 방법으로 로그인하기</P>
+                        <P>다른 방법으로 로그인하기</P>
                     </PTitle>
                 </Main>
             </Image>

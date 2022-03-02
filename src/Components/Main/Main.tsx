@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
-import {Link} from "react-scroll"
+import { Link } from "react-scroll"
 import React, { useEffect, useState } from "react";
-import {Link as Li} from "react-router-dom";
+import { Link as Li } from "react-router-dom";
 export const Animation = keyframes`
     0%{
         opacity : 0;
@@ -45,7 +45,7 @@ const H4 = styled.h4`
     letter-spacing: -0.04861111111111111vw;
     margin-bottom:3.75vw;
 `
-const First = styled(Box).attrs({id : "1"})`
+const First = styled(Box).attrs({ id: "1" })`
     ::before{
     content :""  ;
     background : url("https://an2-img.amz.wtchn.net/image/v2/CfFOq6D__lgxqxVn33d_4w.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqRXZkVE41YTJ4dmNEWnBOMjE0T0hGa2NIUjFabVVpZlEucGdwM3BJemhPVjRnLWowS1ZTSkd1emF4NXBRel9XTnFKZ3l3NHVTZktkaw") center center / cover no-repeat;
@@ -59,7 +59,7 @@ const First = styled(Box).attrs({id : "1"})`
 }
 
     `
-const Second = styled(Box).attrs({id : "2"})`
+const Second = styled(Box).attrs({ id: "2" })`
 ::before{
     content :""  ;
     background : url("https://an2-img.amz.wtchn.net/image/v2/mstekYRJbXsB11aQAh5uqw.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqSXZjM1J2Y21VdmFXMWhaMlV2TVRZd09EVTFNVFl6TkRVeE5qVXhNak00TlNKOS5CQXk2ckl6cjAzNVVPYzVaODJpNTZ6eUdITzhFM3JHQVhseW5UVGZMekZz") center center / cover no-repeat;
@@ -72,7 +72,7 @@ const Second = styled(Box).attrs({id : "2"})`
     opacity: 0.6;
 }
 `
-const Third = styled(Box).attrs({id : "3"})`
+const Third = styled(Box).attrs({ id: "3" })`
 ::before{
     content :""  ;
     background : url("https://an2-img.amz.wtchn.net/image/v2/F-Ny23NqHJiMoEG72fB1jw.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqSXZjM1J2Y21VdmFXMWhaMlV2TVRZek9UTTNOVGc1T0RneU1UTXdORGcxT0NKOS5NLW9iQ0QzTEFkMnhSYnc0V2JGSW1jaUFndl9fRFFTVUIxUUhXR3gxUWE4") center center / cover no-repeat;
@@ -85,7 +85,7 @@ const Third = styled(Box).attrs({id : "3"})`
     opacity: 0.6;
 }
 `
-const Fourth = styled(Box).attrs({id : "4"})`
+const Fourth = styled(Box).attrs({ id: "4" })`
     ::before{
     content :""  ;
     background : url("https://an2-img.amz.wtchn.net/image/v2/ii6wJCYLACBS7sru0oZhkA.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqRXZhbVppYzNSd1pYZDVlSEUxYUhod01tNWtaR1lpZlEuN0dkd0pkOTJrMWZoUzFrXzVhS3JNbG05c0dPZ0hFaU5wQnloeTlrRWdtdw") center center / cover no-repeat;
@@ -98,7 +98,7 @@ const Fourth = styled(Box).attrs({id : "4"})`
     opacity: 0.6;
 }
 `
-const Fifth = styled(Box).attrs({id : "5"})`
+const Fifth = styled(Box).attrs({ id: "5" })`
     ::before{
     content :""  ;
     background : url("https://an2-img.amz.wtchn.net/image/v2/-XAxJnuESCZrE1BfehvMFQ.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqSXZjM1J2Y21VdmFXMWhaMlV2TVRZeE9UYzNPVFkxT1RrMk1qUXlOek01TUNKOS5OaDRfTFl3ZmRycUx6X1lldDk4dlNsUHp1YTNKV2t5ZUVXYXhNS1R5bUxB") center center / cover no-repeat;
@@ -145,7 +145,7 @@ position: relative;
     background : url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU2LjMgKDgxNzE2KSAtIGh0dHBzOi8vc2tldGNoLmNvbSAtLT4KICAgIDx0aXRsZT5BcnRib2FyZDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJBcnRib2FyZCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBvbHlnb24gaWQ9IlBhdGgiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgcG9pbnRzPSIxOS42OTM2MTY4IDExLjIxODg4IDQuOTU1ODk4OTUgMTEuMjE4ODggMTEuMTk2NzA3NCAxNy4zOTU0MTg5IDkuNDgxNDQgMTkuMDkyNDk2OCAwLjMgMTAuMDA1NjQyMSAyLjAxNTI2NzM3IDguMzA4NTY0MjEgMi4wMTU4NzM2OCA4LjMwOTE3MDUzIDkuNDgxNDQgMC45MiAxMS4xOTY3MDc0IDIuNjE3MDc3ODkgNC45NTU4OTg5NSA4Ljc5MzYxNjg0IDE5LjY5MzYxNjggOC43OTM2MTY4NCI+PC9wb2x5Z29uPgogICAgPC9nPgo8L3N2Zz4=") center no-repeat;
     background-size : 1.736111111vw 1.7361111111111111vw;
     cursor: pointer;
-` 
+`
 const UpArrow = styled.button`
 position: relative;
     width:3.33333333333333333vw;
@@ -158,7 +158,7 @@ position: relative;
     background : url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU2LjMgKDgxNzE2KSAtIGh0dHBzOi8vc2tldGNoLmNvbSAtLT4KICAgIDx0aXRsZT5BcnRib2FyZDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJBcnRib2FyZCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBvbHlnb24gaWQ9IlBhdGgiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgcG9pbnRzPSIxOS42OTM2MTY4IDExLjIxODg4IDQuOTU1ODk4OTUgMTEuMjE4ODggMTEuMTk2NzA3NCAxNy4zOTU0MTg5IDkuNDgxNDQgMTkuMDkyNDk2OCAwLjMgMTAuMDA1NjQyMSAyLjAxNTI2NzM3IDguMzA4NTY0MjEgMi4wMTU4NzM2OCA4LjMwOTE3MDUzIDkuNDgxNDQgMC45MiAxMS4xOTY3MDc0IDIuNjE3MDc3ODkgNC45NTU4OTg5NSA4Ljc5MzYxNjg0IDE5LjY5MzYxNjggOC43OTM2MTY4NCI+PC9wb2x5Z29uPgogICAgPC9nPgo8L3N2Zz4=") center no-repeat;
     background-size : 1.736111111vw 1.7361111111111111vw;
     cursor: pointer;
-` 
+`
 
 const Right = styled.div`
     position : fixed;
@@ -220,6 +220,21 @@ export const Login = styled.div`
     right: -11px;
 
 `
+const useScroll = () => {
+    const [state, setState] = useState({
+        x: 0,
+        y: 0
+    });
+    const onScroll = () => {
+        setState({ y: window.scrollY, x: window.scrollX });
+    };
+    useEffect(() => {
+        window.addEventListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+    return state;
+};
+
 function Main() {
     const [fCircle, setFCircle] = useState<boolean>(true);
     const [sCircle, setSCircle] = useState<boolean>(false);
@@ -227,11 +242,18 @@ function Main() {
     const [foCircle, setFoCircle] = useState<boolean>(false);
     const [fiCircle, setFiCircle] = useState<boolean>(false);
     const [height, setHeight] = useState<boolean>(false);
+    const [state, setState] = useState({ x: 0, y: 0 });
     const fPicture = React.useRef<HTMLDivElement>(null);
     const sPicture = React.useRef<HTMLDivElement>(null);
     const tPicture = React.useRef<HTMLDivElement>(null);
     const foPicture = React.useRef<HTMLDivElement>(null);
     const fiPicture = React.useRef<HTMLDivElement>(null);
+
+    /*
+        const target = document.getElementById('2');
+        const clientRect = target?.getBoundingClientRect();
+        const relativeTop = clientRect.top;
+    */
 
     const FirstClick = () => {
         setFCircle(true);
@@ -269,64 +291,62 @@ function Main() {
         setFiCircle(true);
     }
 
-    const moveScroll = (ref : React.RefObject<HTMLDivElement>) => {
-        ref.current?.scrollIntoView({ behavior:'smooth'});
+    const moveScroll = (ref: React.RefObject<HTMLDivElement>) => {
+        ref.current?.scrollIntoView({ behavior: 'smooth' });
     }
 
     const trackHeight = () => {
-        if (window.pageYOffset < window.innerHeight / 2){
+        if (window.pageYOffset < window.innerHeight / 2) {
             FirstClick();
             moveScroll(fPicture);
-        }else if(window.pageYOffset >= window.innerHeight /2 && window.pageYOffset < window.innerHeight *3/2){
+        } else if (window.pageYOffset >= window.innerHeight / 2 && window.pageYOffset < window.innerHeight * 3 / 2) {
             SecondClick();
             moveScroll(sPicture);
-        }else if(window.pageYOffset >= window.innerHeight*3/2 && window.pageYOffset < window.innerHeight *5/2){
+        } else if (window.pageYOffset >= window.innerHeight * 3 / 2 && window.pageYOffset < window.innerHeight * 5 / 2) {
             ThirdClick();
             moveScroll(tPicture);
-        }else if(window.pageYOffset >= window.innerHeight*5/2 && window.pageYOffset < window.innerHeight *7/2){
+        } else if (window.pageYOffset >= window.innerHeight * 5 / 2 && window.pageYOffset < window.innerHeight * 7 / 2) {
             FourthClick();
             moveScroll(foPicture);
-        }else if(window.pageYOffset >= window.innerHeight*7/2 && window.pageYOffset < window.innerHeight *9/2){
+        } else if (window.pageYOffset >= window.innerHeight * 7 / 2 && window.pageYOffset < window.innerHeight * 9 / 2) {
             FifthClick();
             moveScroll(fiPicture);
         }
 
     }
-    
+
     useEffect(() => {
         setTimeout(trackHeight, 2000);
-      }, [window.scrollY]);
-    
+    }, [window.scrollY]);
 
-    useEffect(()=> {
-        if (window.pageYOffset > 0){
-           setHeight(true) 
-        }  
-        else{
+    const { y } = useScroll();
+    useEffect(() => {
+        if (y > 0) {
+            setHeight(true)
+        }
+        else {
             setHeight(false)
         }
-    }, [window.pageYOffset])
-    
-    
-    
+    }, [y]);
+
     return (
         <>
-            {height? <NavH><Li to='/'><Logo/></Li><Li to='sign_in'><Login>로그인</Login></Li></NavH>: <Nav><Li to='/'><Logo/></Li><Li to='sign_in'><Login>로그인</Login></Li></Nav>}
+            {height ? <NavH><Li to='/'><Logo /></Li><Li to='sign_in'><Login>로그인</Login></Li></NavH> : <Nav><Li to='/'><Logo /></Li><Li to='sign_in'><Login>로그인</Login></Li></Nav>}
             <First ref={fPicture}>
                 <Text>
                     <Span>영화, 드라마, 예능, 다큐멘터리를 무제한으로 <br /></Span>
                     <H4>매주 5백 여편의 신작이 업데이트 되며, 추가 요금은 전혀 없어요.</H4>
                     <Li to="/start"><Button>2주 무료 이용 시작</Button></Li>
                 </Text>
-                <Circle><Link to="2" spy={true} smooth={true}><DownArrow onClick={SecondClick}/></Link></Circle>
+                <Circle><Link to="2" spy={true} smooth={true}><DownArrow onClick={SecondClick} /></Link></Circle>
             </First>
-            <Second ref={sPicture}>
+            <Second ref={sPicture} >
                 <Text >
                     <Span>여럿이 함께, 하나의 이용권으로 <br /></Span>
                     <H4>동시 4개 기기에서 재생이 가능한 프리미엄 이용권을 이용해보세요.</H4>
                     <Li to="/start"><Button>2주 무료 이용 시작</Button></Li>
                 </Text>
-                <Circle><Link to="3" spy={true} smooth={true}><DownArrow onClick={ThirdClick}/></Link></Circle>
+                <Circle><Link to="3" spy={true} smooth={true}><DownArrow onClick={ThirdClick} /></Link></Circle>
             </Second>
             <Third ref={tPicture}>
                 <Text>
@@ -334,7 +354,7 @@ function Main() {
                     <H4>최대 Ultra HD 4K 해상도로 생생한 감동을 느껴보세요.</H4>
                     <Li to="/start"><Button>2주 무료 이용 시작</Button></Li>
                 </Text>
-                <Circle><Link to="4" spy={true} smooth={true}><DownArrow onClick={FourthClick}/></Link></Circle>
+                <Circle><Link to="4" spy={true} smooth={true}><DownArrow onClick={FourthClick} /></Link></Circle>
             </Third>
             <Fourth ref={foPicture}>
                 <Text>
@@ -342,22 +362,22 @@ function Main() {
                     <H4>보고 싶은 콘텐츠를 다운로드하여 오프라인으로 즐기세요.</H4>
                     <Li to="/start"><Button>2주 무료 이용 시작</Button></Li>
                 </Text>
-                <Circle><Link to="5" spy={true} smooth={true}><DownArrow onClick={FifthClick}/></Link></Circle>
+                <Circle><Link to="5" spy={true} smooth={true}><DownArrow onClick={FifthClick} /></Link></Circle>
             </Fourth>
-            <Fifth ref={fiPicture}>                
+            <Fifth ref={fiPicture}>
                 <Text>
                     <Span>스마트폰, 태블릿, TV, PC, 크롬캐스트, Android TV에서 <br /></Span>
                     <H4>10만여 편의 작품을 무제한 스트리밍하세요.</H4>
                     <Li to="/start"><Button>2주 무료 이용 시작</Button></Li>
                 </Text>
-                <Circle><Link to="1" spy={true} smooth={true}><UpArrow onClick={FirstClick}/></Link></Circle>
+                <Circle><Link to="1" spy={true} smooth={true}><UpArrow onClick={FirstClick} /></Link></Circle>
             </Fifth>
             <Right>
-                {fCircle?<Link to="1" spy={true} smooth={true}><AccentRightCircle onClick={FirstClick}/></Link> : <Link to="1" spy={true} smooth={true}><RightCircle onClick={FirstClick}/></Link> }
-                {sCircle?<Link to="2" spy={true} smooth={true}><AccentRightCircle onClick={SecondClick}/></Link> : <Link to="2" spy={true} smooth={true} ><RightCircle onClick={SecondClick}/></Link> }
-                {tCircle?<Link to="3" spy={true} smooth={true}><AccentRightCircle onClick={ThirdClick}/></Link> : <Link to="3" spy={true} smooth={true}><RightCircle onClick={ThirdClick}/></Link> }
-                {foCircle?<Link to="4" spy={true} smooth={true}><AccentRightCircle onClick={FourthClick}/></Link> : <Link to="4" spy={true} smooth={true}><RightCircle onClick={FourthClick}/></Link> }
-                {fiCircle?<Link to="5" spy={true} smooth={true}><AccentRightCircle onClick={FifthClick}/></Link> : <Link to="5" spy={true} smooth={true}><RightCircle onClick={FifthClick}/></Link> }
+                {fCircle ? <Link to="1" spy={true} smooth={true}><AccentRightCircle onClick={FirstClick} /></Link> : <Link to="1" spy={true} smooth={true}><RightCircle onClick={FirstClick} /></Link>}
+                {sCircle ? <Link to="2" spy={true} smooth={true}><AccentRightCircle onClick={SecondClick} /></Link> : <Link to="2" spy={true} smooth={true} ><RightCircle onClick={SecondClick} /></Link>}
+                {tCircle ? <Link to="3" spy={true} smooth={true}><AccentRightCircle onClick={ThirdClick} /></Link> : <Link to="3" spy={true} smooth={true}><RightCircle onClick={ThirdClick} /></Link>}
+                {foCircle ? <Link to="4" spy={true} smooth={true}><AccentRightCircle onClick={FourthClick} /></Link> : <Link to="4" spy={true} smooth={true}><RightCircle onClick={FourthClick} /></Link>}
+                {fiCircle ? <Link to="5" spy={true} smooth={true}><AccentRightCircle onClick={FifthClick} /></Link> : <Link to="5" spy={true} smooth={true}><RightCircle onClick={FifthClick} /></Link>}
             </Right>
         </>
     );
