@@ -89,6 +89,13 @@ const Line = styled.div`
     width: 260px;
     height: 1px;
 `
+const Bottom = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+`
 
 const Information = styled.p`
     color : ${props => props.theme.textColor};
@@ -100,7 +107,7 @@ const Information = styled.p`
 `
 
 const LoginButton = styled.div`
-    z-index: 10;
+    z-index: 100;
     display: flex;
     background-color: rgb(248, 47, 98);
     font-size: 15px;
@@ -139,12 +146,14 @@ function Start() {
                 <Main>
                     <Logo />
                     <Middle>
-                        <Link to='sign_up'><Button>이메일로 가입</Button></Link>
+                        <Link to='/sign_up'><Button>이메일로 가입</Button></Link>
                         <Button>다른 방법으로 계속하기</Button>
                     </Middle>
                     <Line />
-                    <Information>왓챠와 왓챠피디아는 같은 계정을 사용해요.</Information>
-                    <LoginButton>로그인</LoginButton>
+                    <Bottom>
+                        <Information>왓챠와 왓챠피디아는 같은 계정을 사용해요.</Information>
+                        <Link to="/sign_in"><LoginButton>로그인</LoginButton></Link>
+                    </Bottom>
                 </Main>
             </Image>
         </>

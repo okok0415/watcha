@@ -4,6 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 import Main from "./Components/Main/Main";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Start from "./Components/Start/Start";
+import Sign_up from "./Components/Login/Sign_up";
+import Sign_in from "./Components/Login/Sign_in";
 
 function Router() {
     return (
@@ -12,6 +14,8 @@ function Router() {
                 <Route path="/" exact={true}><Main /></Route>
                 <Route path="/home"><Dashboard /></Route>
                 <Route path="/start"><Start /></Route>
+                <Route path='/sign_up'><Sign_up/></Route>
+                <Route path='/sign_in'><Sign_in/></Route>
             </Switch>
         </BrowserRouter>
     )

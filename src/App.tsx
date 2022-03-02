@@ -67,6 +67,12 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+input{
+	
+    outline: none;
+	font-family: 'Noto Sans KR', 'Nanum Gothic', sans-serif;
+  	font-weight: 400;
+}
 `
 function App() {
 	return (
