@@ -2,6 +2,11 @@ import styled, { keyframes } from "styled-components";
 import { Link } from "react-scroll"
 import React, { useEffect, useState } from "react";
 import { Link as Li } from "react-router-dom";
+import One from "./Images/2_censored2.jpg"
+import Two from "./Images/55.png"
+import Three from "./Images/66_censored.jpg"
+import T from "./Images/77.png"
+import Five from "./Images/8.png"
 export const Animation = keyframes`
     0%{
         opacity : 0;
@@ -48,41 +53,44 @@ const H4 = styled.h4`
 const First = styled(Box).attrs({ id: "1" })`
     ::before{
     content :""  ;
-    background : url("https://an2-img.amz.wtchn.net/image/v2/CfFOq6D__lgxqxVn33d_4w.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqRXZkVE41YTJ4dmNEWnBOMjE0T0hGa2NIUjFabVVpZlEucGdwM3BJemhPVjRnLWowS1ZTSkd1emF4NXBRel9XTnFKZ3l3NHVTZktkaw") center center / cover no-repeat;
+    
+    background : url(${One}) center center / cover no-repeat;
+
     z-index:0;
     height: 100vh;
     width: 100vw;
     display:flex;
     justify-content: center;
     animation : ${Animation} 2s;
-    opacity: 0.6;
-}
+    opacity: 0.4;
+}`
 
-    `
+//background : url("https://an2-img.amz.wtchn.net/image/v2/CfFOq6D__lgxqxVn33d_4w.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqRXZkVE41YTJ4dmNEWnBOMjE0T0hGa2NIUjFabVVpZlEucGdwM3BJemhPVjRnLWowS1ZTSkd1emF4NXBRel9XTnFKZ3l3NHVTZktkaw") center center / cover no-repeat;
+
 const Second = styled(Box).attrs({ id: "2" })`
 ::before{
     content :""  ;
-    background : url("https://an2-img.amz.wtchn.net/image/v2/mstekYRJbXsB11aQAh5uqw.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqSXZjM1J2Y21VdmFXMWhaMlV2TVRZd09EVTFNVFl6TkRVeE5qVXhNak00TlNKOS5CQXk2ckl6cjAzNVVPYzVaODJpNTZ6eUdITzhFM3JHQVhseW5UVGZMekZz") center center / cover no-repeat;
+    background : url(${T}) center center / cover no-repeat;
     z-index:0;
     height: 100vh;
     width: 100vw;
     display:flex;
     justify-content: center;
     animation : ${Animation} 2s;
-    opacity: 0.6;
+    opacity: 0.4;
 }
 `
 const Third = styled(Box).attrs({ id: "3" })`
 ::before{
     content :""  ;
-    background : url("https://an2-img.amz.wtchn.net/image/v2/F-Ny23NqHJiMoEG72fB1jw.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqSXZjM1J2Y21VdmFXMWhaMlV2TVRZek9UTTNOVGc1T0RneU1UTXdORGcxT0NKOS5NLW9iQ0QzTEFkMnhSYnc0V2JGSW1jaUFndl9fRFFTVUIxUUhXR3gxUWE4") center center / cover no-repeat;
+    background : url(${Three}) center center / cover no-repeat;
     z-index:0;
     height: 100vh;
     width: 100vw;
     display:flex;
     justify-content: center;
     animation : ${Animation} 2s;
-    opacity: 0.6;
+    opacity: 0.4;
 }
 `
 const Fourth = styled(Box).attrs({ id: "4" })`
@@ -95,20 +103,20 @@ const Fourth = styled(Box).attrs({ id: "4" })`
     display:flex;
     justify-content: center;
     animation : ${Animation} 2s;
-    opacity: 0.6;
+    opacity: 0.4;
 }
 `
 const Fifth = styled(Box).attrs({ id: "5" })`
     ::before{
     content :""  ;
-    background : url("https://an2-img.amz.wtchn.net/image/v2/-XAxJnuESCZrE1BfehvMFQ.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqSXZjM1J2Y21VdmFXMWhaMlV2TVRZeE9UYzNPVFkxT1RrMk1qUXlOek01TUNKOS5OaDRfTFl3ZmRycUx6X1lldDk4dlNsUHp1YTNKV2t5ZUVXYXhNS1R5bUxB") center center / cover no-repeat;
+    background : url(${Five}) center center / cover no-repeat;
     z-index:0;
     height: 100vh;
     width: 100vw;
     display:flex;
     justify-content: center;
     animation : ${Animation} 2s;
-    opacity: 0.6;
+    opacity: 0.4;
 }
 `
 const Button = styled.div`
@@ -116,7 +124,8 @@ const Button = styled.div`
     background-color: ${props => props.theme.buttonColor};
     height : 4.16666666666vw;
     width: auto;
-    min-width : 13.125vw;
+    min-width : 10.125vw;
+    justify-content: center;
     border-radius: 2.08333333vw;
     text-align: center;
     font-size: 1.38888888888vw;
@@ -334,41 +343,41 @@ function Main() {
             {height ? <NavH><Li to='/'><Logo /></Li><Li to='sign_in'><Login>로그인</Login></Li></NavH> : <Nav><Li to='/'><Logo /></Li><Li to='sign_in'><Login>로그인</Login></Li></Nav>}
             <First ref={fPicture}>
                 <Text>
-                    <Span>영화, 드라마, 예능, 다큐멘터리를 무제한으로 <br /></Span>
-                    <H4>매주 5백 여편의 신작이 업데이트 되며, 추가 요금은 전혀 없어요.</H4>
-                    <Li to="/start"><Button>2주 무료 이용 시작</Button></Li>
+                    <Span>임정민의 종합 포트폴리오 & 프로필<br /></Span>
+                    <H4>인적사항, 프로젝트 , 경력을 한 눈에 보려면</H4>
+                    <Li to="/start"><Button>보러 가기</Button></Li>
                 </Text>
                 <Circle><Link to="2" spy={true} smooth={true}><DownArrow onClick={SecondClick} /></Link></Circle>
             </First>
             <Second ref={sPicture} >
                 <Text >
-                    <Span>여럿이 함께, 하나의 이용권으로 <br /></Span>
-                    <H4>동시 4개 기기에서 재생이 가능한 프리미엄 이용권을 이용해보세요.</H4>
-                    <Li to="/start"><Button>2주 무료 이용 시작</Button></Li>
+                    <Span>Cheating Detection <br /></Span>
+                    <H4>시험 플랫폼에 딥러닝 모델을 결합하여 부정행위를 탐지하는 프로젝트</H4>
+                    <Li to="/start"><Button>보러 가기</Button></Li>
                 </Text>
                 <Circle><Link to="3" spy={true} smooth={true}><DownArrow onClick={ThirdClick} /></Link></Circle>
             </Second>
             <Third ref={tPicture}>
                 <Text>
-                    <Span>이제 TV로 최고의 화질을 경험하세요 <br /></Span>
-                    <H4>최대 Ultra HD 4K 해상도로 생생한 감동을 느껴보세요.</H4>
-                    <Li to="/start"><Button>2주 무료 이용 시작</Button></Li>
+                    <Span>IMSAFE<br /></Span>
+                    <H4>중앙보훈병원과 협업하여 독거노인의 데이터를 분석하거나 <br />낙상등의 응급상황을 탐지하고 보호자에게 자동으로 연락하는 프로젝트</H4>
+                    <Li to="/start"><Button>보러 가기</Button></Li>
                 </Text>
                 <Circle><Link to="4" spy={true} smooth={true}><DownArrow onClick={FourthClick} /></Link></Circle>
             </Third>
             <Fourth ref={foPicture}>
                 <Text>
-                    <Span>이동 중에도 감상을 멈추지 마세요 <br /></Span>
-                    <H4>보고 싶은 콘텐츠를 다운로드하여 오프라인으로 즐기세요.</H4>
-                    <Li to="/start"><Button>2주 무료 이용 시작</Button></Li>
+                    <Span>My STOCK MBTI<br /></Span>
+                    <H4>MBTI 테스트 결과에 따른 주식종목을 추천 해주는 React만 사용한 21년 초 첫번째 프로젝트</H4>
+                    <Li to="/start"><Button>보러 가기</Button></Li>
                 </Text>
                 <Circle><Link to="5" spy={true} smooth={true}><DownArrow onClick={FifthClick} /></Link></Circle>
             </Fourth>
             <Fifth ref={fiPicture}>
                 <Text>
-                    <Span>스마트폰, 태블릿, TV, PC, 크롬캐스트, Android TV에서 <br /></Span>
-                    <H4>10만여 편의 작품을 무제한 스트리밍하세요.</H4>
-                    <Li to="/start"><Button>2주 무료 이용 시작</Button></Li>
+                    <Span>Fruits Classification<br /></Span>
+                    <H4>다양한 머신러닝, 딥러닝 모델을 이용한 과일 사진을 학습하고 파라미터를 조정하며 정확도를 비교하는 프로젝트</H4>
+                    <Li to="/start"><Button>보러 가기</Button></Li>
                 </Text>
                 <Circle><Link to="1" spy={true} smooth={true}><UpArrow onClick={FirstClick} /></Link></Circle>
             </Fifth>
