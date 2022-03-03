@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Login, Logo, Nav } from "../Main/Main";
-
+import './Login.css';
 
 export const Box = styled.div`
     display: flex;
@@ -63,7 +64,6 @@ export const FormatRSpan = styled.span`
 export const Form = styled.form`
     box-sizing: border-box;
 `
-
 export const FormList = styled.div`
     position: relative;
     width: 100%;
@@ -92,7 +92,6 @@ const Email = styled(Input).attrs(
     border-width: 0px 1px 1px;
     border-style: solid;
     border-image: initial;
-
 `
 const Password = styled(Input).attrs(
     {
@@ -132,7 +131,9 @@ export const LoginButton = styled.div`
     justify-content: center;
     opacity: 0.6;
 `
-
+export const LoginSuccessButton = styled(LoginButton)`
+    opacity: 1;
+`
 export const PTitle = styled.div`
     display: flex;
     align-items: flex-start;
@@ -151,7 +152,49 @@ export const P = styled.div`
 `
 function Sign_in() {
 
+    const [email, setEmail] = useState<string>()
+    const [password, setPassword] = useState<string>()
+    const [onecheck, setOnecheck] = useState<number>(0);
+    const [twocheck, setTwocheck] = useState<number>(0)
 
+    const onChangeEmail = (e : React.FormEvent<HTMLInputElement>) => {
+        setEmail(e.currentTarget.value)
+    }
+    const requireEmail = (e : React.FormEvent<HTMLInputElement>) => {
+        let string = e.currentTarget.value;
+        if (string.includes('@') && string.includes('.')){
+            setOnecheck(2)
+        }
+        else if (e.currentTarget.value.length === 0){
+            setOnecheck(0)
+        }
+        else{
+            setOnecheck(1)
+        }
+    }
+    const mergeEmail = (e : React.FormEvent<HTMLInputElement>) => {
+        onChangeEmail(e);
+        requireEmail(e)
+    }
+
+    const onChangePassword = (e : React.FormEvent<HTMLInputElement>) => {
+        setPassword(e.currentTarget.value)
+    }
+    const requirePassword = (e : React.FormEvent<HTMLInputElement>) => {
+        if (e.currentTarget.value.length > 5){
+            setTwocheck(2)
+        }
+        else if (e.currentTarget.value.length === 0){
+            setTwocheck(0)
+        }
+        else{
+            setTwocheck(1)
+        }
+    }
+    const mergePassword = (e : React.FormEvent<HTMLInputElement>) => {
+        onChangePassword(e);
+        requirePassword(e)
+    }
 
     return (
         <>
@@ -165,12 +208,11 @@ function Sign_in() {
                             <FormatRSpan>비밀번호를 잊어버리셨나요?</FormatRSpan>
                         </FormatTitle>
                         <Form>
-                            <FormList><Email /></FormList>
-                            <FormList><Password /></FormList>
-
+                            <FormList className={onecheck === 0 ? '' : onecheck === 1 ? 'x' : 'o'}><Email value={email} onChange={mergeEmail}/></FormList>
+                            <FormList className={twocheck === 0 ? '' : twocheck === 1 ? 'x' : 'o'}><Password value={password} onChange={mergePassword}/></FormList>
                         </Form>
                         <LoginSession>
-                            <LoginButton>로그인</LoginButton>
+                            {onecheck === 2 && twocheck ===2 ? <LoginSuccessButton>로그인</LoginSuccessButton>: <LoginButton>로그인</LoginButton>}
                         </LoginSession>
                     </Format>
                     <PTitle>
