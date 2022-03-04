@@ -6,7 +6,7 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import Start from "./Components/Start/Start";
 import Sign_up from "./Components/Login/Sign_up";
 import Sign_in from "./Components/Login/Sign_in";
-import { BrowseRouter } from "./Components/Browse/BrowseRouter";
+import { BrowseRouter } from "./Components/Portfolio/PortfolioRouter";
 
 function Router() {
     return (
@@ -17,7 +17,7 @@ function Router() {
                 <Route path="/start"><Start /></Route>
                 <Route path='/sign_up'><Sign_up/></Route>
                 <Route path='/sign_in'><Sign_in/></Route>
-                <Route path='/browse' component={BrowseRouter} />
+                <Route path='/portfolio' component={BrowseRouter} />
             </Switch>
         </BrowserRouter>
     )

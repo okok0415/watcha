@@ -1,11 +1,11 @@
 import { Route, Switch } from "react-router-dom"
-import Video from "./Video"
+import Profile from "./Profile"
 
 export const BrowseRouter = ({match} : {match : any}) => {
     return (
         <>
             <Switch>
-                <Route path={match.path + '/video'} component={Video}/>
+                <Route path={match.path + '/profile'} component={Profile}/>
             </Switch>
         </> 
     )

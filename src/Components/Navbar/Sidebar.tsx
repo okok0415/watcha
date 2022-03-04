@@ -90,19 +90,33 @@ function Sidebar () {
                             <Li>
                                 <Lili>
                                     <HomeIcon/>
-                                    홈
+                                    임정민의 프로필
                                 </Lili>
                             </Li>
+                    </Ul>
+                    <Ul>
                             <Li>
                                 <Lili>
                                     <SearchIcon/>
-                                    검색
+                                    Cheating Detection
                                 </Lili>
                             </Li>
                             <Li>
                                 <Lili>
                                     <StarIcon/>
-                                    평가하기
+                                    IMSAFE
+                                </Lili>
+                            </Li>
+                            <Li>
+                                <Lili>
+                                    <StarIcon/>
+                                    My Stock MBTI
+                                </Lili>
+                            </Li>
+                            <Li>
+                                <Lili>
+                                    <StarIcon/>
+                                    Fruits Classification
                                 </Lili>
                             </Li>
                     </Ul>

@@ -345,7 +345,7 @@ function Main() {
                 <Text>
                     <Span>임정민의 종합 포트폴리오 & 프로필<br /></Span>
                     <H4>인적사항, 프로젝트 , 경력을 한 눈에 보려면</H4>
-                    <Li to="/start"><Button>보러 가기</Button></Li>
+                    <Li to="/portfolio/profile"><Button>보러 가기</Button></Li>
                 </Text>
                 <Circle><Link to="2" spy={true} smooth={true}><DownArrow onClick={SecondClick} /></Link></Circle>
             </First>
