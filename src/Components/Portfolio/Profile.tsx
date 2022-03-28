@@ -243,6 +243,31 @@ const ProjectTeamRight = styled.div`
 const ProjectAbstract = styled.div`
     margin-bottom: 5px;
 `
+
+const LetterTitle = styled.div`
+    margin: 30px 0px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 1px solid rgb(200,200,200);
+    align-items: center;
+`
+
+const LetterName = styled.span`
+
+`
+
+const LetterContent = styled.div`
+    margin: 20px 0;
+
+`
+const LetterContentLeft = styled.div`
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    margin: 5px 20px;
+`
+
 function Profile() {
 
     return (
@@ -333,32 +358,26 @@ function Profile() {
                             </SkillRight>
                         </Skill>
                     </SkillWrapper>
-                    <SHeader>병역사항</SHeader>
+                    <SHeader>어학자격/증명서</SHeader>
                     <Skill>
-                        <SkillRightTextLeft>병역 구분</SkillRightTextLeft>
-                        <SkillRightTextRight>군필</SkillRightTextRight>
+                        <SkillRightTextLeft>자격증 명</SkillRightTextLeft>
+                        <SkillRightTextRight>토익(TOEIC)</SkillRightTextRight>
                     </Skill>
                     <Skill>
-                        <SkillRightTextLeft>군별</SkillRightTextLeft>
-                        <SkillRightTextRight>육군</SkillRightTextRight>
+                        <SkillRightTextLeft>취득 일자</SkillRightTextLeft>
+                        <SkillRightTextRight>2022.02.27</SkillRightTextRight>
                     </Skill>
                     <Skill>
-                        <SkillRightTextLeft>병과</SkillRightTextLeft>
-                        <SkillRightTextRight>운전병</SkillRightTextRight>
+                        <SkillRightTextLeft>취득 점수</SkillRightTextLeft>
+                        <SkillRightTextRight>Total 760(LC435, RC325)</SkillRightTextRight>
                     </Skill>
                     <Skill>
-                        <SkillRightTextLeft>계급</SkillRightTextLeft>
-                        <SkillRightTextRight>병장</SkillRightTextRight>
-                    </Skill>
-                    <Skill>
-                        <SkillRightTextLeft>복무 기간</SkillRightTextLeft>
-                        <SkillRightTextRight>2018.03.05 ~ 2019.11.03</SkillRightTextRight>
-                    </Skill>
-                    <Skill>
-                        <SkillRightTextLeft>제대 구분</SkillRightTextLeft>
-                        <SkillRightTextRight>만기제대</SkillRightTextRight>
+                        <SkillRightTextLeft>인증 기관</SkillRightTextLeft>
+                        <SkillRightTextRight>한국토익위원회</SkillRightTextRight>
                     </Skill>
                 </Section>
+                <Blank />
+                <Blank />
                 <Blank />
                 <Section>
                     <Header>
@@ -378,11 +397,11 @@ function Profile() {
                         <Information>
                             <InformationText>
                                 <InfTextLeft>* :</InfTextLeft>
-                                <InfTextRight>다른 기술 블로그의 코드를 그대로 가져와서 사용한 경우, 혹은 완성되지 못한 프로젝트에서 경험만 해본 단계</InfTextRight>
+                                <InfTextRight>코드를 읽을 수 있으며 완성되지 못한 프로젝트에서 경험만 해본 단계</InfTextRight>
                             </InformationText>
                             <InformationText>
                                 <InfTextLeft>** :</InfTextLeft>
-                                <InfTextRight>팀원으로 프로젝트에서 사용하였거나, 강의나 교과목 등으로 전체적인 내용을 수료한 경우</InfTextRight>
+                                <InfTextRight>팀원으로 프로젝트에서 사용하였거나, 강의나 교과목 등으로 전체적인 내용을 수료한 단계</InfTextRight>
                             </InformationText>
                             <InformationText>
                                 <InfTextLeft>*** :</InfTextLeft>
@@ -686,6 +705,96 @@ function Profile() {
                             </ProjectContentRight>
                         </ProjectContent>
                     </ProjectContentWrapper>
+                </Section>
+                <Section>
+                    <Header>
+                        자기소개서
+                    </Header>
+                    <LetterTitle>
+                        <LetterName>본인이 버킷플레이스와 Frontend 직무를 선택한 이유는 무엇이며, 만약 입사하게 된다면 어떻게 회사 발전에 기여할 수 있는지 작성해주세요. </LetterName>
+                    </LetterTitle>
+                    <ProjectContentWrapper>
+                        <LetterContent>
+                            <LetterContentLeft>
+                                저는 최근 오늘의집 기술 블로그에서 MSA 전환 프로젝트를 보며 저도 같이 일원이 되어 해결하고 싶다는 생각이 들었습니다.
+                                <br /><br />
+                                Ruby on Rails의 의존성을 줄이고 React의 전환을 이루어낸 프론트엔드팀에서 저는 React 라이브러리의 전문성을 지닌 사람으로서 팀에 이바지할 수 있다는 생각을 하였습니다.
+                                <br /><br />
+                                저는 21년 초 첫 프로젝트로 React 라이브러리를 사용하였고 이후 홍익대학교 컴퓨터 공학과 연구실에서 노인 데이터 관제 웹 애플리케이션 개발, 졸업 프로젝트인 부정행위 탐지기반 실시간 온라인 시험 애플리케이션의 프론트엔드를 단독으로 구현한 경험이 있습니다.
+                                <br /><br />
+                                또한, 저는 문제해결능력에 강점이 있습니다. 졸업 프로젝트의 팀장으로서 프론트엔드와 백엔드 뿐만 아니라 딥 러닝 모델 결합 과정에서 발생하는 다양한 문제들을 저의 아이디어로 해결한 경험이 다수 있고 제가 맡은 일이 아니어도 책임감 있게 다른 팀원과 의견을 공유하며 배움을 얻고 아이디어를 제공하는 적극적인 태도로 프로젝트에 임해왔습니다.
+                                <br /><br />
+                                저의 이러한 태도와 강점을 통해 버킷플레이스 프론트엔드 팀에 합류하여 MSA 전환과 같은 과업들을 같이 해결해나가고 싶습니다.                                <br /><br />
+                            </LetterContentLeft>
+                        </LetterContent>
+                    </ProjectContentWrapper>
+                    <LetterTitle>
+                        <LetterName>본인의 SW개발 활동 경험 중 다른 사람과 함께 같은 목표를 위해 노력한 경험 또는 어려운 기술적 문제를 해결한 경험에 대해 얘기해 주세요. </LetterName>
+                    </LetterTitle>
+                    <ProjectContentWrapper>
+                        <LetterContent>
+                            <LetterContentLeft>
+                                저는 졸업프로젝트로 부정행위 탐지 딥 러닝 모델 기반 실시간 시험 플랫폼을 개발한 경험이 있습니다.
+                                <br /><br />
+                                이는 실시간 시험을 칠 수 있는 웹 서비스로 시선 추적 딥 러닝 모델과 동일 인물 탐지 딥 러닝 모델 두 개를 결합하고 WebRTC를 이용한 화면공유 기능을 사용하여 모니터 밖의 시험 자료 응시, 대리시험, 모니터 내 자료 응시 3가지의 부정행위를 바로 잡고 온라인 시험의 부정행위를 줄이고자 하는 목적의 프로젝트였습니다.
+                                <br /><br />
+                                저는 그 중 실시간 시험 웹 서비스 개발과 딥 러닝 모델 결합, WebRTC를 이용한 화면공유 기능 구현 위 3가지 역할을 맡았습니다.
+                                <br /><br />
+                                프로젝트를 오랜 기간 하면서 다양한 시행착오가 있었지만 가장 대표적인 두 가지 사례를 언급하고자 합니다.
+                                <br /><br />
+                                첫 번째는 시선 추적 좌표를 관리자에게 어떻게 전달할 것인가? 에 대한 의문이었습니다.
+                                <br /><br />
+                                시선 추적 모델은 웹캠 영상 프레임을 모델에 넣으면 시선 좌표가 나오는 형태였는데, 학생 웹캠 영상 프레임을 시선 추적 모델에 넣어 실시간으로 좌표를 받아서 관리자에게 보내야 했습니다.
+                                <br /><br />
+                                여기서 주제에 대한 의문이 생겼습니다. 학생의 웹캠 영상 프레임을 받기 위해 WebSocket 통신을 하고 있었는데, 이는 1:1 통신이었기 때문에 학생과 연결된 상태에서 관리자에게 시선 좌표를 보내려면 학생과의 WebSocket 연결을 끊어야 했습니다.
+                                <br /><br />
+                                이를 해결하기 위해 2주간 다양한 WebSocket 관련 문서를 읽으며 공부하고, 다양한 사례를 찾아보며 시도를 한 결과 학생에게 시선 좌표를 전달해준 뒤 P2P 형태로 관리자에게 전달하는 방법을 고안해냈습니다.
+                                <br /><br />
+                                쉽게 설명하면 학생의 시선 좌표를 학생 본인이 받은 다음, 관리자에게 학생이 보이지 않는 채팅으로 시선 좌표를 보내는 형태였습니다.
+                                <br /><br />
+                                이는 성공적으로 작동하였습니다.
+                                <br /><br />
+                                두 번째는 모델 접근성의 문제였습니다.
+                                <br /><br />
+                                시선 추적 모델은 작동하기 위해 사전에 거쳐야 하는 Pine-Tuning, 카메라 파라미터 조정 등이 있어 시험을 치르기 전에 거쳐야 하는 과정이 번거로웠습니다.
+                                <br /><br />
+                                저는 시선 추적의 정확도가 떨어지더라도 이러한 과정을 줄이는 것이 사용자에게 편리함을 줄 것으로 판단하였고, 팀원은 과정 중 한 개라도 제외하게 된다면 정확도에 치명적인 영향을 줄 것이라 하며 반대하였습니다.
+                                <br /><br />
+                                따라서 저희는 직접 정확도를 실험을 통해 비교하기로 하였습니다. 카메라 파라미터 조정을 하는 기존 방식과 카메라 파라미터 부분을 제외한 방식을 비교하였는데, 기존에 있던 방식은 시선 이탈을 탐지하는 확률이 90%에 육박하였으나, 카메라 파라미터 부분을 제외하니 탐지율이 50~60%에 그쳤습니다.
+                                <br /><br />
+                                저희 팀은 수치화된 탐지율을 보고 번거롭더라도 탐지를 잘하는 모델을 선택하는 데 합의했고, 수치화된 데이터를 보니 모두 결과를 납득할 수 있었습니다.
+                                <br /><br />
+                                이후 프로젝트는 성공적으로 마무리되었고 프로젝트 수업에서 A+ 성적을 받는 쾌거를 이루어냈습니다.
+                                <br /><br />
+                            </LetterContentLeft>
+                        </LetterContent>
+                    </ProjectContentWrapper>
+                    <LetterTitle>
+                        <LetterName>본인이 끝까지 파고들어 본 가장 의미있었던 개발 경험과 이를 통해 성취한 것과 배운 점은 무엇인지 작성해주세요. </LetterName>
+                    </LetterTitle>
+                    <ProjectContentWrapper>
+                        <LetterContent>
+                            <LetterContentLeft>
+                                저는 작년 6월부터 12월까지 홍익대학교 컴퓨터공학과 연구실(APL)에서 IMSAFE 프로젝트를 진행한 적이 있습니다.
+                                <br /><br />
+                                이는 개인 프로젝트가 아닌 회사, 병원과 협업하여 하는 프로젝트로, 노인들의 낙상, 발열, 수면 데이터 등을 분석하고 응급 상황 시 병원 관계자들과 보호자에게 알람을 보내 더 큰 사고를 예방하는 프로젝트였습니다.
+                                <br /><br />
+                                저는 그중 병원 관계자들이 데이터를 관제할 수 있는 웹 페이지를 8주 내로 기획, UI/UX, 프론트엔드 개발 업무를 맡았습니다.
+                                <br /><br />
+                                저는 평일 7시간 정도를 이 업무에 투자하였고, 주 1회씩 사수에게 피드백을 받아 6주 만에 업무를 완성하였습니다.
+                                <br /><br />
+                                계획된 시간보다 일을 신속히 마무리한 것을 좋게 보신 교수님은 추후 다른 인원에게 배정될 업무였던 백엔드 개발, 알람 시스템 구축, 데이터 분석 후 리포트 작성 등 다양한 업무를 추가로 배정하였습니다.
+                                <br /><br />
+                                비록 프로젝트 중간에 투입되었지만, 프로젝트가 마무리될 때는 데이터 관리/알람을 총괄하는 핵심 프로젝트 원이 되었습니다.
+                                <br /><br />
+                                또한, 당시 기초적인 프론트엔드 개발 역량만을 가지고 있던 저는 서버 개발, 데이터 분석 등 다양한 직무의 경험을 할 수 있었고 특정 회사에서 졸업 후 거취에 대해 제의가 오기도 했습니다.
+                                <br /><br />
+                                이를 통해 한 가지에 꾸준히 집중하고 노력하면 좋은 결과가 따른다는 것을 알게 되었고, 다양한 직무의 경험을 하면서 처음 도전하는 일에 대한 두려움이 비교적 사라졌습니다.
+                                <br /><br />
+                            </LetterContentLeft>
+                        </LetterContent>
+                    </ProjectContentWrapper>
+
                 </Section>
             </Wrap>
         </>
