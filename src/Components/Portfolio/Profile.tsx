@@ -548,12 +548,6 @@ function Profile() {
                                 <ProjectAbstract>&nbsp;&nbsp;&nbsp;Selenium을 통한 응급상황 발생 시 로그인 후 메세지 보내는 과정을 자동화</ProjectAbstract>
                                 <ProjectAbstract>&nbsp;&nbsp;&nbsp;알람 발생 시 데이터베이스에 저장</ProjectAbstract>
                                 <Blank2 />
-                                <ProjectAbstract>• 응급상황 발생 시 알람 시스템 구축</ProjectAbstract>
-                                <ProjectAbstract>&nbsp;&nbsp;&nbsp;지속적으로 데이터베이스를 확인하고 응급상황 발생 시 카카오톡 알람 전송 시스템 구축</ProjectAbstract>
-                                <ProjectAbstract>&nbsp;&nbsp;&nbsp;낙상, 고열 등의 응급상황 기준 알고리즘 생성</ProjectAbstract>
-                                <ProjectAbstract>&nbsp;&nbsp;&nbsp;Selenium을 통한 응급상황 발생 시 로그인 후 메세지 보내는 과정을 자동화</ProjectAbstract>
-                                <ProjectAbstract>&nbsp;&nbsp;&nbsp;알람 발생 시 데이터베이스에 저장</ProjectAbstract>
-                                <Blank2 />
                                 <ProjectAbstract>• SmartThings 센서 데이터 분석</ProjectAbstract>
                                 <ProjectAbstract>&nbsp;&nbsp;&nbsp;실내온도, 외출 횟수, 화장실 이용 횟수 등을 측정할 수 있는 ioT 기기 데이터를 데이터베이스로 연동</ProjectAbstract>
                                 <ProjectAbstract>&nbsp;&nbsp;&nbsp;Pandas로 센서 데이터 분석 후 노인분들과 병원 관계자에게 주간 리포트 발송</ProjectAbstract>
