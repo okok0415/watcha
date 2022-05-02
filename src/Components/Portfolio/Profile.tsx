@@ -107,7 +107,7 @@ const InformationWrapper = styled.div`
 const Information = styled.div`
     font-size: 14px;
     width: 800px;
-    height: 150px;
+    height: 120px;
     padding: 20px;
     background-color: rgb(240,240,240);
 `
@@ -397,19 +397,15 @@ function Profile() {
                         <Information>
                             <InformationText>
                                 <InfTextLeft>* :</InfTextLeft>
-                                <InfTextRight>코드를 읽을 수 있으며 완성되지 못한 프로젝트에서 경험만 해본 단계</InfTextRight>
+                                <InfTextRight>코드를 읽을 수 있으며, 책을 참고하여 약간의 수정작업 또는 작은 변경사항을 추가할 수 있는 단계</InfTextRight>
                             </InformationText>
                             <InformationText>
                                 <InfTextLeft>** :</InfTextLeft>
-                                <InfTextRight>팀원으로 프로젝트에서 사용하였거나, 강의나 교과목 등으로 전체적인 내용을 수료한 단계</InfTextRight>
+                                <InfTextRight>시스템 동작 방식을 알고 있으며, 기본적인 기능을 구현할 수 있는 단계</InfTextRight>
                             </InformationText>
                             <InformationText>
                                 <InfTextLeft>*** :</InfTextLeft>
-                                <InfTextRight>본인 주체적으로 사용하여 프로젝트를 완료하였으나 공식 문서, Stack overflow 등을 참고하지 않으면 진행하는 데 차질이 생기는 단계</InfTextRight>
-                            </InformationText>
-                            <InformationText>
-                                <InfTextLeft>**** :</InfTextLeft>
-                                <InfTextRight>공식 문서를 참고하지 않아도 대부분의 원하는 것을 구현할 수 있는 단계</InfTextRight>
+                                <InfTextRight>중간규모 프로그램 및 시스템을 개발할 수 있으며, 내부 구조에 대해 이해하고 있음</InfTextRight>
                             </InformationText>
                         </Information>
                     </InformationWrapper>
@@ -418,7 +414,7 @@ function Profile() {
                             <SkillLeft>Frontend</SkillLeft>
                             <SkillRight>
                                 <SkillRightLi>•   HTML5***, CSS3***, JavaScript(ES6)***, TypeScript***</SkillRightLi>
-                                <SkillRightLi>•   React****</SkillRightLi>
+                                <SkillRightLi>•   React***</SkillRightLi>
                                 <SkillRightLi>•   Redux**, Recoil**</SkillRightLi>
                                 <SkillRightLi>•   Styled-Components***</SkillRightLi>
                             </SkillRight>
@@ -426,24 +422,18 @@ function Profile() {
                         <Skill>
                             <SkillLeft>Backend</SkillLeft>
                             <SkillRight>
-                                <SkillRightLi>•   Django***, Flask***</SkillRightLi>
-                                <SkillRightLi>•   MongoDB***, SQLite3**, Redis*</SkillRightLi>
+                                <SkillRightLi>•   Python**</SkillRightLi>
+                                <SkillRightLi>•   Django***, Flask**</SkillRightLi>
+                                <SkillRightLi>•   MongoDB*, SQLite3*, Redis*</SkillRightLi>
                                 <SkillRightLi>•   REST API***, WebSocket***</SkillRightLi>
                                 <SkillRightLi>•   Visual Studio Code, Jupyter</SkillRightLi>
                                 <SkillRightLi>•   Git</SkillRightLi>
                             </SkillRight>
                         </Skill>
                         <Skill>
-                            <SkillLeft>DevOps</SkillLeft>
-                            <SkillRight>
-                                <SkillRightLi>•   Docker**</SkillRightLi>
-                                <SkillRightLi>•   AWS EC2**</SkillRightLi>
-                            </SkillRight>
-                        </Skill>
-                        <Skill>
                             <SkillLeft>Data Science</SkillLeft>
                             <SkillRight>
-                                <SkillRightLi>•   Pandas**</SkillRightLi>
+                                <SkillRightLi>•   Pandas*</SkillRightLi>
                                 <SkillRightLi>•   Pytorch*</SkillRightLi>
                             </SkillRight>
                         </Skill>
@@ -457,6 +447,8 @@ function Profile() {
                         </Skill>
                     </SkillWrapper>
                 </Section>
+                <Blank />
+                <Blank />
                 <Blank />
                 <Blank />
                 <Section>
@@ -496,7 +488,7 @@ function Profile() {
                             <ProjectContentLeft>담당 업무</ProjectContentLeft>
                             <ProjectContentRight>
                                 <ProjectAbstract>• 병원 관계자들이 노인들의 데이터를 관제 할 수 있는 웹 프론트엔드 개발</ProjectAbstract>
-                                <ProjectAbstract>&nbsp;&nbsp;&nbsp;데이터 관제 웹페이지 UI/UX 기획 및 구현(10페이지 분량)</ProjectAbstract>
+                                <ProjectAbstract>&nbsp;&nbsp;&nbsp;데이터 관제 웹페이지 UI 설계(10페이지 분량)</ProjectAbstract>
                                 <ProjectAbstract>&nbsp;&nbsp;&nbsp;데이터 추가 기능 구현</ProjectAbstract>
                                 <ProjectAbstract>&nbsp;&nbsp;&nbsp;테이블 정렬, 검색 기능 개발</ProjectAbstract>
                             </ProjectContentRight>
@@ -535,22 +527,22 @@ function Profile() {
                                 <ProjectAbstract>&nbsp;&nbsp;&nbsp;병원 관계자, 보장구 센터 이용자 인터뷰 및 개선방안 분석</ProjectAbstract>
                                 <ProjectAbstract>&nbsp;&nbsp;&nbsp;병원 물류 센터 개선 방안 분석 & 자문</ProjectAbstract>
                                 <Blank2 />
-                                <ProjectAbstract>• 발열 측정 센서 설치 및 데이터베이스 연동</ProjectAbstract>
-                                <ProjectAbstract>&nbsp;&nbsp;&nbsp;발열 측정 센서 데이터베이스 구축 및 연동</ProjectAbstract>
+                                <ProjectAbstract>• 발열 측정 데이터베이스 연동</ProjectAbstract>
+                                <ProjectAbstract>&nbsp;&nbsp;&nbsp;발열 측정 센서 데이터베이스 연동</ProjectAbstract>
                                 <Blank2 />
-                                <ProjectAbstract>• 병원 관계자들이 노인 데이터를 관제할 수 있는 웹 서버 개발</ProjectAbstract>
+                                <ProjectAbstract>• 병원 관계자들이 노인 데이터를 관제할 수 있는 웹 서비스 개발</ProjectAbstract>
                                 <ProjectAbstract>&nbsp;&nbsp;&nbsp;로그인 세션, 노인 상세 정보, 연결된 센서 등 API 생성</ProjectAbstract>
-                                <ProjectAbstract>&nbsp;&nbsp;&nbsp;데이터베이스 구축 및 연동</ProjectAbstract>
+                                <ProjectAbstract>&nbsp;&nbsp;&nbsp;데이터베이스 연동</ProjectAbstract>
                                 <Blank2 />
                                 <ProjectAbstract>• 응급상황 발생 시 알람 시스템 구축</ProjectAbstract>
                                 <ProjectAbstract>&nbsp;&nbsp;&nbsp;지속적으로 데이터베이스를 확인하고 응급상황 발생 시 카카오톡 알람 전송 시스템 구축</ProjectAbstract>
-                                <ProjectAbstract>&nbsp;&nbsp;&nbsp;낙상, 고열 등의 응급상황 기준 알고리즘 생성</ProjectAbstract>
-                                <ProjectAbstract>&nbsp;&nbsp;&nbsp;Selenium을 통한 응급상황 발생 시 로그인 후 메세지 보내는 과정을 자동화</ProjectAbstract>
+                                <ProjectAbstract>&nbsp;&nbsp;&nbsp;고열 등의 응급상황 기준 알고리즘 생성</ProjectAbstract>
+                                <ProjectAbstract>&nbsp;&nbsp;&nbsp;응급상황 발생 시 메세지 보내는 과정 자동화</ProjectAbstract>
                                 <ProjectAbstract>&nbsp;&nbsp;&nbsp;알람 발생 시 데이터베이스에 저장</ProjectAbstract>
                                 <Blank2 />
-                                <ProjectAbstract>• SmartThings 센서 데이터 분석</ProjectAbstract>
+                                <ProjectAbstract>• ioT 센서 데이터 DB 연동</ProjectAbstract>
                                 <ProjectAbstract>&nbsp;&nbsp;&nbsp;실내온도, 외출 횟수, 화장실 이용 횟수 등을 측정할 수 있는 ioT 기기 데이터를 데이터베이스로 연동</ProjectAbstract>
-                                <ProjectAbstract>&nbsp;&nbsp;&nbsp;Pandas로 센서 데이터 분석 후 노인분들과 병원 관계자에게 주간 리포트 발송</ProjectAbstract>
+                                <ProjectAbstract>&nbsp;&nbsp;&nbsp;노인분들과 병원 관계자에게 주간 리포트 발송</ProjectAbstract>
                                 <Blank2 />
                             </ProjectContentRight>
                         </ProjectContent>
@@ -575,15 +567,15 @@ function Profile() {
                             <ProjectContentRight>
                                 <ProjectTeam>
                                     <ProjectTeamLeft>임정민(팀장)</ProjectTeamLeft>
-                                    <ProjectTeamRight>- Frontend Developer, Backend Developer</ProjectTeamRight>
+                                    <ProjectTeamRight>- Web Frontend/Backend Develop</ProjectTeamRight>
                                 </ProjectTeam>
                                 <ProjectTeam>
                                     <ProjectTeamLeft>이강복</ProjectTeamLeft>
-                                    <ProjectTeamRight>- ML/DL Developer</ProjectTeamRight>
+                                    <ProjectTeamRight>- ML/DL Develop</ProjectTeamRight>
                                 </ProjectTeam>
                                 <ProjectTeam>
                                     <ProjectTeamLeft>하인혜</ProjectTeamLeft>
-                                    <ProjectTeamRight>- ML/DL Developer</ProjectTeamRight>
+                                    <ProjectTeamRight>- ML/DL Develop</ProjectTeamRight>
                                 </ProjectTeam>
                             </ProjectContentRight>
                         </ProjectContent>
@@ -600,7 +592,7 @@ function Profile() {
                         <ProjectContent>
                             <ProjectContentLeft>상세 업무</ProjectContentLeft>
                             <ProjectContentRight>
-                                <ProjectAbstract>• 온라인 시험 플랫폼 UI/UX 기획 및 구현(10~20페이지 분량)</ProjectAbstract>
+                                <ProjectAbstract>• 온라인 시험 플랫폼 UI 설계 및 구현(10~20페이지 분량)</ProjectAbstract>
                                 <ProjectAbstract>• WebSocket P2P를 통한 관리자-응시자 사이의 채팅, 웹 캠 프레임, 화면 공유, 시선 좌표를 관리자에게 전송</ProjectAbstract>
                                 <ProjectAbstract>• 로그인 세션(로그인, 회원가입, 정보, 로그아웃)구현 및 API 생성</ProjectAbstract>
                                 <ProjectAbstract>• WebSocket을 통한 동영상 프레임을 시선 추적 모델에 연결</ProjectAbstract>
@@ -625,15 +617,15 @@ function Profile() {
                             <ProjectContentRight>
                                 <ProjectTeam>
                                     <ProjectTeamLeft>이종민(팀장)</ProjectTeamLeft>
-                                    <ProjectTeamRight>- Product Manager</ProjectTeamRight>
+                                    <ProjectTeamRight>- PM</ProjectTeamRight>
                                 </ProjectTeam>
                                 <ProjectTeam>
                                     <ProjectTeamLeft>이동혁</ProjectTeamLeft>
-                                    <ProjectTeamRight>- Product Manager</ProjectTeamRight>
+                                    <ProjectTeamRight>- PM</ProjectTeamRight>
                                 </ProjectTeam>
                                 <ProjectTeam>
                                     <ProjectTeamLeft>임정민</ProjectTeamLeft>
-                                    <ProjectTeamRight>- Frontend Developer</ProjectTeamRight>
+                                    <ProjectTeamRight>- Web Develop</ProjectTeamRight>
                                 </ProjectTeam>
                             </ProjectContentRight>
                         </ProjectContent>
@@ -700,99 +692,104 @@ function Profile() {
                         </ProjectContent>
                     </ProjectContentWrapper>
                 </Section>
-                <Section>
-                    <Header>
-                        자기소개서
-                    </Header>
-                    <LetterTitle>
-                        <LetterName>본인이 버킷플레이스와 Frontend 직무를 선택한 이유는 무엇이며, 만약 입사하게 된다면 어떻게 회사 발전에 기여할 수 있는지 작성해주세요. </LetterName>
-                    </LetterTitle>
-                    <ProjectContentWrapper>
-                        <LetterContent>
-                            <LetterContentLeft>
-                                저는 최근 오늘의집 기술 블로그에서 MSA 전환 프로젝트를 보며 저도 같이 일원이 되어 해결하고 싶다는 생각이 들었습니다.
-                                <br /><br />
-                                Ruby on Rails의 의존성을 줄이고 React의 전환을 이루어낸 프론트엔드팀에서 저는 React 라이브러리의 전문성을 지닌 사람으로서 팀에 이바지할 수 있다는 생각을 하였습니다.
-                                <br /><br />
-                                저는 21년 초 첫 프로젝트로 React 라이브러리를 사용하였고 이후 홍익대학교 컴퓨터 공학과 연구실에서 노인 데이터 관제 웹 애플리케이션 개발, 졸업 프로젝트인 부정행위 탐지기반 실시간 온라인 시험 애플리케이션의 프론트엔드를 단독으로 구현한 경험이 있습니다.
-                                <br /><br />
-                                또한, 저는 문제해결능력에 강점이 있습니다. 졸업 프로젝트의 팀장으로서 프론트엔드와 백엔드 뿐만 아니라 딥 러닝 모델 결합 과정에서 발생하는 다양한 문제들을 저의 아이디어로 해결한 경험이 다수 있고 제가 맡은 일이 아니어도 책임감 있게 다른 팀원과 의견을 공유하며 배움을 얻고 아이디어를 제공하는 적극적인 태도로 프로젝트에 임해왔습니다.
-                                <br /><br />
-                                저의 이러한 태도와 강점을 통해 버킷플레이스 프론트엔드 팀에 합류하여 MSA 전환과 같은 과업들을 같이 해결해나가고 싶습니다.                                <br /><br />
-                            </LetterContentLeft>
-                        </LetterContent>
-                    </ProjectContentWrapper>
-                    <LetterTitle>
-                        <LetterName>본인의 SW개발 활동 경험 중 다른 사람과 함께 같은 목표를 위해 노력한 경험 또는 어려운 기술적 문제를 해결한 경험에 대해 얘기해 주세요. </LetterName>
-                    </LetterTitle>
-                    <ProjectContentWrapper>
-                        <LetterContent>
-                            <LetterContentLeft>
-                                저는 졸업프로젝트로 부정행위 탐지 딥 러닝 모델 기반 실시간 시험 플랫폼을 개발한 경험이 있습니다.
-                                <br /><br />
-                                이는 실시간 시험을 칠 수 있는 웹 서비스로 시선 추적 딥 러닝 모델과 동일 인물 탐지 딥 러닝 모델 두 개를 결합하고 WebRTC를 이용한 화면공유 기능을 사용하여 모니터 밖의 시험 자료 응시, 대리시험, 모니터 내 자료 응시 3가지의 부정행위를 바로 잡고 온라인 시험의 부정행위를 줄이고자 하는 목적의 프로젝트였습니다.
-                                <br /><br />
-                                저는 그 중 실시간 시험 웹 서비스 개발과 딥 러닝 모델 결합, WebRTC를 이용한 화면공유 기능 구현 위 3가지 역할을 맡았습니다.
-                                <br /><br />
-                                프로젝트를 오랜 기간 하면서 다양한 시행착오가 있었지만 가장 대표적인 두 가지 사례를 언급하고자 합니다.
-                                <br /><br />
-                                첫 번째는 시선 추적 좌표를 관리자에게 어떻게 전달할 것인가? 에 대한 의문이었습니다.
-                                <br /><br />
-                                시선 추적 모델은 웹캠 영상 프레임을 모델에 넣으면 시선 좌표가 나오는 형태였는데, 학생 웹캠 영상 프레임을 시선 추적 모델에 넣어 실시간으로 좌표를 받아서 관리자에게 보내야 했습니다.
-                                <br /><br />
-                                여기서 주제에 대한 의문이 생겼습니다. 학생의 웹캠 영상 프레임을 받기 위해 WebSocket 통신을 하고 있었는데, 이는 1:1 통신이었기 때문에 학생과 연결된 상태에서 관리자에게 시선 좌표를 보내려면 학생과의 WebSocket 연결을 끊어야 했습니다.
-                                <br /><br />
-                                이를 해결하기 위해 2주간 다양한 WebSocket 관련 문서를 읽으며 공부하고, 다양한 사례를 찾아보며 시도를 한 결과 학생에게 시선 좌표를 전달해준 뒤 P2P 형태로 관리자에게 전달하는 방법을 고안해냈습니다.
-                                <br /><br />
-                                쉽게 설명하면 학생의 시선 좌표를 학생 본인이 받은 다음, 관리자에게 학생이 보이지 않는 채팅으로 시선 좌표를 보내는 형태였습니다.
-                                <br /><br />
-                                이는 성공적으로 작동하였습니다.
-                                <br /><br />
-                                두 번째는 모델 접근성의 문제였습니다.
-                                <br /><br />
-                                시선 추적 모델은 작동하기 위해 사전에 거쳐야 하는 Pine-Tuning, 카메라 파라미터 조정 등이 있어 시험을 치르기 전에 거쳐야 하는 과정이 번거로웠습니다.
-                                <br /><br />
-                                저는 시선 추적의 정확도가 떨어지더라도 이러한 과정을 줄이는 것이 사용자에게 편리함을 줄 것으로 판단하였고, 팀원은 과정 중 한 개라도 제외하게 된다면 정확도에 치명적인 영향을 줄 것이라 하며 반대하였습니다.
-                                <br /><br />
-                                따라서 저희는 직접 정확도를 실험을 통해 비교하기로 하였습니다. 카메라 파라미터 조정을 하는 기존 방식과 카메라 파라미터 부분을 제외한 방식을 비교하였는데, 기존에 있던 방식은 시선 이탈을 탐지하는 확률이 90%에 육박하였으나, 카메라 파라미터 부분을 제외하니 탐지율이 50~60%에 그쳤습니다.
-                                <br /><br />
-                                저희 팀은 수치화된 탐지율을 보고 번거롭더라도 탐지를 잘하는 모델을 선택하는 데 합의했고, 수치화된 데이터를 보니 모두 결과를 납득할 수 있었습니다.
-                                <br /><br />
-                                이후 프로젝트는 성공적으로 마무리되었고 프로젝트 수업에서 A+ 성적을 받는 쾌거를 이루어냈습니다.
-                                <br /><br />
-                            </LetterContentLeft>
-                        </LetterContent>
-                    </ProjectContentWrapper>
-                    <LetterTitle>
-                        <LetterName>본인이 끝까지 파고들어 본 가장 의미있었던 개발 경험과 이를 통해 성취한 것과 배운 점은 무엇인지 작성해주세요. </LetterName>
-                    </LetterTitle>
-                    <ProjectContentWrapper>
-                        <LetterContent>
-                            <LetterContentLeft>
-                                저는 작년 6월부터 12월까지 홍익대학교 컴퓨터공학과 연구실(APL)에서 IMSAFE 프로젝트를 진행한 적이 있습니다.
-                                <br /><br />
-                                이는 개인 프로젝트가 아닌 회사, 병원과 협업하여 하는 프로젝트로, 노인들의 낙상, 발열, 수면 데이터 등을 분석하고 응급 상황 시 병원 관계자들과 보호자에게 알람을 보내 더 큰 사고를 예방하는 프로젝트였습니다.
-                                <br /><br />
-                                저는 그중 병원 관계자들이 데이터를 관제할 수 있는 웹 페이지를 8주 내로 기획, UI/UX, 프론트엔드 개발 업무를 맡았습니다.
-                                <br /><br />
-                                저는 평일 7시간 정도를 이 업무에 투자하였고, 주 1회씩 사수에게 피드백을 받아 6주 만에 업무를 완성하였습니다.
-                                <br /><br />
-                                계획된 시간보다 일을 신속히 마무리한 것을 좋게 보신 교수님은 추후 다른 인원에게 배정될 업무였던 백엔드 개발, 알람 시스템 구축, 데이터 분석 후 리포트 작성 등 다양한 업무를 추가로 배정하였습니다.
-                                <br /><br />
-                                비록 프로젝트 중간에 투입되었지만, 프로젝트가 마무리될 때는 데이터 관리/알람을 총괄하는 핵심 프로젝트 원이 되었습니다.
-                                <br /><br />
-                                또한, 당시 기초적인 프론트엔드 개발 역량만을 가지고 있던 저는 서버 개발, 데이터 분석 등 다양한 직무의 경험을 할 수 있었고 특정 회사에서 졸업 후 거취에 대해 제의가 오기도 했습니다.
-                                <br /><br />
-                                이를 통해 한 가지에 꾸준히 집중하고 노력하면 좋은 결과가 따른다는 것을 알게 되었고, 다양한 직무의 경험을 하면서 처음 도전하는 일에 대한 두려움이 비교적 사라졌습니다.
-                                <br /><br />
-                            </LetterContentLeft>
-                        </LetterContent>
-                    </ProjectContentWrapper>
 
-                </Section>
             </Wrap>
         </>
     )
 }
 
 export default Profile;
+
+
+/*
+<Section>
+<Header>
+    자기소개서
+</Header>
+<LetterTitle>
+    <LetterName>본인이 버킷플레이스와 Frontend 직무를 선택한 이유는 무엇이며, 만약 입사하게 된다면 어떻게 회사 발전에 기여할 수 있는지 작성해주세요. </LetterName>
+</LetterTitle>
+<ProjectContentWrapper>
+    <LetterContent>
+        <LetterContentLeft>
+            저는 최근 오늘의집 기술 블로그에서 MSA 전환 프로젝트를 보며 저도 같이 일원이 되어 해결하고 싶다는 생각이 들었습니다.
+            <br /><br />
+            Ruby on Rails의 의존성을 줄이고 React의 전환을 이루어낸 프론트엔드팀에서 저는 React 라이브러리의 전문성을 지닌 사람으로서 팀에 이바지할 수 있다는 생각을 하였습니다.
+            <br /><br />
+            저는 21년 초 첫 프로젝트로 React 라이브러리를 사용하였고 이후 홍익대학교 컴퓨터 공학과 연구실에서 노인 데이터 관제 웹 애플리케이션 개발, 졸업 프로젝트인 부정행위 탐지기반 실시간 온라인 시험 애플리케이션의 프론트엔드를 단독으로 구현한 경험이 있습니다.
+            <br /><br />
+            또한, 저는 문제해결능력에 강점이 있습니다. 졸업 프로젝트의 팀장으로서 프론트엔드와 백엔드 뿐만 아니라 딥 러닝 모델 결합 과정에서 발생하는 다양한 문제들을 저의 아이디어로 해결한 경험이 다수 있고 제가 맡은 일이 아니어도 책임감 있게 다른 팀원과 의견을 공유하며 배움을 얻고 아이디어를 제공하는 적극적인 태도로 프로젝트에 임해왔습니다.
+            <br /><br />
+            저의 이러한 태도와 강점을 통해 버킷플레이스 프론트엔드 팀에 합류하여 MSA 전환과 같은 과업들을 같이 해결해나가고 싶습니다.                                <br /><br />
+        </LetterContentLeft>
+    </LetterContent>
+</ProjectContentWrapper>
+<LetterTitle>
+    <LetterName>본인의 SW개발 활동 경험 중 다른 사람과 함께 같은 목표를 위해 노력한 경험 또는 어려운 기술적 문제를 해결한 경험에 대해 얘기해 주세요. </LetterName>
+</LetterTitle>
+<ProjectContentWrapper>
+    <LetterContent>
+        <LetterContentLeft>
+            저는 졸업프로젝트로 부정행위 탐지 딥 러닝 모델 기반 실시간 시험 플랫폼을 개발한 경험이 있습니다.
+            <br /><br />
+            이는 실시간 시험을 칠 수 있는 웹 서비스로 시선 추적 딥 러닝 모델과 동일 인물 탐지 딥 러닝 모델 두 개를 결합하고 WebRTC를 이용한 화면공유 기능을 사용하여 모니터 밖의 시험 자료 응시, 대리시험, 모니터 내 자료 응시 3가지의 부정행위를 바로 잡고 온라인 시험의 부정행위를 줄이고자 하는 목적의 프로젝트였습니다.
+            <br /><br />
+            저는 그 중 실시간 시험 웹 서비스 개발과 딥 러닝 모델 결합, WebRTC를 이용한 화면공유 기능 구현 위 3가지 역할을 맡았습니다.
+            <br /><br />
+            프로젝트를 오랜 기간 하면서 다양한 시행착오가 있었지만 가장 대표적인 두 가지 사례를 언급하고자 합니다.
+            <br /><br />
+            첫 번째는 시선 추적 좌표를 관리자에게 어떻게 전달할 것인가? 에 대한 의문이었습니다.
+            <br /><br />
+            시선 추적 모델은 웹캠 영상 프레임을 모델에 넣으면 시선 좌표가 나오는 형태였는데, 학생 웹캠 영상 프레임을 시선 추적 모델에 넣어 실시간으로 좌표를 받아서 관리자에게 보내야 했습니다.
+            <br /><br />
+            여기서 주제에 대한 의문이 생겼습니다. 학생의 웹캠 영상 프레임을 받기 위해 WebSocket 통신을 하고 있었는데, 이는 1:1 통신이었기 때문에 학생과 연결된 상태에서 관리자에게 시선 좌표를 보내려면 학생과의 WebSocket 연결을 끊어야 했습니다.
+            <br /><br />
+            이를 해결하기 위해 2주간 다양한 WebSocket 관련 문서를 읽으며 공부하고, 다양한 사례를 찾아보며 시도를 한 결과 학생에게 시선 좌표를 전달해준 뒤 P2P 형태로 관리자에게 전달하는 방법을 고안해냈습니다.
+            <br /><br />
+            쉽게 설명하면 학생의 시선 좌표를 학생 본인이 받은 다음, 관리자에게 학생이 보이지 않는 채팅으로 시선 좌표를 보내는 형태였습니다.
+            <br /><br />
+            이는 성공적으로 작동하였습니다.
+            <br /><br />
+            두 번째는 모델 접근성의 문제였습니다.
+            <br /><br />
+            시선 추적 모델은 작동하기 위해 사전에 거쳐야 하는 Pine-Tuning, 카메라 파라미터 조정 등이 있어 시험을 치르기 전에 거쳐야 하는 과정이 번거로웠습니다.
+            <br /><br />
+            저는 시선 추적의 정확도가 떨어지더라도 이러한 과정을 줄이는 것이 사용자에게 편리함을 줄 것으로 판단하였고, 팀원은 과정 중 한 개라도 제외하게 된다면 정확도에 치명적인 영향을 줄 것이라 하며 반대하였습니다.
+            <br /><br />
+            따라서 저희는 직접 정확도를 실험을 통해 비교하기로 하였습니다. 카메라 파라미터 조정을 하는 기존 방식과 카메라 파라미터 부분을 제외한 방식을 비교하였는데, 기존에 있던 방식은 시선 이탈을 탐지하는 확률이 90%에 육박하였으나, 카메라 파라미터 부분을 제외하니 탐지율이 50~60%에 그쳤습니다.
+            <br /><br />
+            저희 팀은 수치화된 탐지율을 보고 번거롭더라도 탐지를 잘하는 모델을 선택하는 데 합의했고, 수치화된 데이터를 보니 모두 결과를 납득할 수 있었습니다.
+            <br /><br />
+            이후 프로젝트는 성공적으로 마무리되었고 프로젝트 수업에서 A+ 성적을 받는 쾌거를 이루어냈습니다.
+            <br /><br />
+        </LetterContentLeft>
+    </LetterContent>
+</ProjectContentWrapper>
+<LetterTitle>
+    <LetterName>본인이 끝까지 파고들어 본 가장 의미있었던 개발 경험과 이를 통해 성취한 것과 배운 점은 무엇인지 작성해주세요. </LetterName>
+</LetterTitle>
+<ProjectContentWrapper>
+    <LetterContent>
+        <LetterContentLeft>
+            저는 작년 6월부터 12월까지 홍익대학교 컴퓨터공학과 연구실(APL)에서 IMSAFE 프로젝트를 진행한 적이 있습니다.
+            <br /><br />
+            이는 개인 프로젝트가 아닌 회사, 병원과 협업하여 하는 프로젝트로, 노인들의 낙상, 발열, 수면 데이터 등을 분석하고 응급 상황 시 병원 관계자들과 보호자에게 알람을 보내 더 큰 사고를 예방하는 프로젝트였습니다.
+            <br /><br />
+            저는 그중 병원 관계자들이 데이터를 관제할 수 있는 웹 페이지를 8주 내로 기획, UI/UX, 프론트엔드 개발 업무를 맡았습니다.
+            <br /><br />
+            저는 평일 7시간 정도를 이 업무에 투자하였고, 주 1회씩 사수에게 피드백을 받아 6주 만에 업무를 완성하였습니다.
+            <br /><br />
+            계획된 시간보다 일을 신속히 마무리한 것을 좋게 보신 교수님은 추후 다른 인원에게 배정될 업무였던 백엔드 개발, 알람 시스템 구축, 데이터 분석 후 리포트 작성 등 다양한 업무를 추가로 배정하였습니다.
+            <br /><br />
+            비록 프로젝트 중간에 투입되었지만, 프로젝트가 마무리될 때는 데이터 관리/알람을 총괄하는 핵심 프로젝트 원이 되었습니다.
+            <br /><br />
+            또한, 당시 기초적인 프론트엔드 개발 역량만을 가지고 있던 저는 서버 개발, 데이터 분석 등 다양한 직무의 경험을 할 수 있었고 특정 회사에서 졸업 후 거취에 대해 제의가 오기도 했습니다.
+            <br /><br />
+            이를 통해 한 가지에 꾸준히 집중하고 노력하면 좋은 결과가 따른다는 것을 알게 되었고, 다양한 직무의 경험을 하면서 처음 도전하는 일에 대한 두려움이 비교적 사라졌습니다.
+            <br /><br />
+        </LetterContentLeft>
+    </LetterContent>
+</ProjectContentWrapper>
+
+</Section>
+*/
